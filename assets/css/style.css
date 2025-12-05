@@ -154,7 +154,7 @@ body {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media only screen and (orientation: portrait) and (max-width: 600px) {
     .hero-top,
     .hero-center,
     .hero-bottom {
@@ -167,10 +167,6 @@ body {
         padding-bottom: 2rem;
     }
 
-    .
-}
-
-@media (max-width: 600px) {
     .hero-content {
         flex-direction: column;
         align-items: center;
@@ -195,17 +191,24 @@ body {
         padding-inline: 15dvw;
         padding-bottom: 5dvh;
     }
-}
 
-@media (max-width: 600px) {
     .profile-pic {
         width: clamp(15vw, 25vw, 50vw);
         height: auto;
     }
 }
 
-@media (max-width: 450px) {
+@media only screen and (orientation: portrait) and (max-width: 450px) {
     .profile-pic {
         width: 60vw;
     }
 }
+
+@media only screen and (orientation: landscape) and (max-width: 1000px){
+    .hero-center .hero-content {
+        padding-inline: 15dvw;
+        padding-bottom: 15dvh;
+        
+    }
+}
+
