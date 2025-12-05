@@ -1,8 +1,11 @@
 /* General */
 
 :root {
-    --page-bg: rgb(16, 9, 34);
-    --hero-page-bg: rgb(0, 0, 0);
+    --page-bg: rgb(22, 9, 34);
+    --hero-page-bg: rgb(4, 2, 11);
+    --particle-color: rgb(231, 186, 230);
+    --particle-links-color: rgb(234, 75, 223);
+    --particle-width: 3;
 }
 
 body {
@@ -26,11 +29,14 @@ body {
 }
 
 .profile-pic {
-    width: clamp(5em, 25vw, 20em);
+    --profile-pic-size: clamp(5em, 25vw, 20em);
+    --profile-pic-shadow: rgb(38, 20, 74);
+    width: var(--profile-pic-size);
     height: auto;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
+    box-shadow: 0 0 calc(var(--profile-pic-size) * .5) var(--profile-pic-shadow);
 }
 
 .cta-btn {
@@ -86,7 +92,7 @@ body {
 .hero-top .gradient,
 .hero-center .gradient,
 .hero-bottom .gradient {
-    height: 15vh;
+    height: 20vh;
 }
 
 .hero-top .gradient{
@@ -196,6 +202,12 @@ body {
         width: clamp(15vw, 25vw, 50vw);
         height: auto;
     }
+
+    .hero-top .gradient,
+    .hero-center .gradient,
+    .hero-bottom .gradient {
+        height: 15vh;
+    }
 }
 
 @media only screen and (orientation: portrait) and (max-width: 450px) {
@@ -209,6 +221,12 @@ body {
         padding-inline: 15dvw;
         padding-bottom: 15dvh;
         
+    }
+
+    .hero-top .gradient,
+    .hero-center .gradient,
+    .hero-bottom .gradient {
+        height: 15vh;
     }
 }
 

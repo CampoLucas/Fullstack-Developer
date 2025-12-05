@@ -39,7 +39,7 @@
             </div>
         </section>
 
-        <section class="hero-page" id="hero-page">
+        <section class="hero-page" id="hero-page" style="background-color: var(--page-bg);">
             
         </section>
         <!-- Projects -->
@@ -54,6 +54,9 @@
         // Get CSS variables
         const rootStyles = getComputedStyle(document.documentElement);
         const heroBg = rootStyles.getPropertyValue('--hero-page-bg').trim();
+        const particleColor = rootStyles.getPropertyValue('--particle-color').trim();
+        const particleLinksColor = rootStyles.getPropertyValue('--particle-links-color').trim();
+        const particleWidth = rootStyles.getPropertyValue('--particle-width').trim();
 
         tsParticles.load("particles-background", {
             background: {
@@ -64,13 +67,13 @@
                     value: 80,
                     density: { enable: true, area: 800 }
                 },
-                color: { value: "#ffffff" },
+                color: { value: particleColor },
                 links: {
                     enable: true,
                     distance: 150,
-                    color: "#ffffff",
+                    color: particleLinksColor,
                     opacity: 0.3,
-                    width: 1
+                    width: particleWidth
                 },
                 move: {
                     enable: true,
