@@ -11,7 +11,7 @@
     <main>
         <!-- Hero Page -->
         <section class="hero-page" id="hero-page">
-            <div id="particles-background"></div>
+            <canvas id="particles-background"></canvas>
             <div class="hero-top" id="hero-top">
                 <div class="hero-content">
                     <div class="gradient"></div>
@@ -21,7 +21,7 @@
                 <div class="hero-content">
                     <div class="hero-text">
                     <p class="greet">Hi,</p>
-                    <h1>I'm <span class="accent">Your Name</span></h1>
+                    <h1>I'm <span class="accent"></span></h1>
                     <h2>Full-Stack Developer</h2>
                     <button class="cta-btn">Contact</button>
                 </div>
@@ -39,14 +39,39 @@
             </div>
         </section>
 
-        <section class="hero-page" id="hero-page" style="background-color: var(--page-bg);">
-            
-        </section>
         <!-- Projects -->
-        <!-- <section class="projects-page" id="projects-page">
+        <section class="projects">
+            <div class="projects-inner">
+                <h2 class="projects-title">Projects</h2>
 
-        </section> -->
+                <ul class="projects-list">
+                    <li class="project-card">
+                        <a href="https://campolucas.github.io/Greatest-Movies/" target="_blank">
+                            <span>Greatest Movies</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner" id="contact">
+            <div class="footer-contacts" role="contentinfo">
+                <div class="social">
+                    <a class="icon linkedin social-link" href="https://www.linkedin.com/in/lucascampo3333/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"></a>
+                    <a class="icon email social-link" href="mailto:campolucas2001@gmail.com" aria-label="Send email"></a>
+                </div>
+
+                <div class="contact-info">
+                    <a href="mailto:campolucas2001@gmail.com" class="contact-link">campolucas2001@gmail.com</a>
+                    <span class="contact-sep">•</span>
+                    <a href="tel:+1234567890" class="contact-link">+54 11 2740-3576</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -59,6 +84,7 @@
         const particleWidth = rootStyles.getPropertyValue('--particle-width').trim();
 
         tsParticles.load("particles-background", {
+            fullScreen: { enable: false },
             background: {
                 color: heroBg
             },

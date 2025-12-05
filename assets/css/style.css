@@ -148,10 +148,14 @@ body {
 
 #particles-background {
     position: absolute;
+    top: 0;
+    left: 0;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    width: 100dvw;
+    height: 100dvh;
     z-index: 0;
+    pointer-events: none;
+    clip-path: inset(0 0 calc(100vh - 100dvh) 0);
 }
 
 .hero-page > * {
@@ -228,5 +232,201 @@ body {
     .hero-bottom .gradient {
         height: 15vh;
     }
+}
+
+/* Footer styles */
+.site-footer {
+    color: #eaeaea;
+    background: linear-gradient(to bottom, var(--page-bg), rgb(0, 0, 0));
+}
+
+.site-footer .footer-inner {
+    margin: 0 auto;
+    padding-top: 24vh;
+    padding-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-title {
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    z-index: 9;
+}
+
+.footer-sub {
+    margin: 0; 
+    opacity: 0.85;
+}
+
+.footer-contacts {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    z-index: 9;
+}
+
+.social {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    z-index: 9;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 140ms ease, background 140ms ease;
+    z-index: 9;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.12);
+    z-index: 9;
+}
+
+.social-link svg { display: block; }
+
+.contact-info { 
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+.contact-link {
+    color: #f3f3f3;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 9;
+}
+
+.contact-sep { opacity: 0.5; }
+
+@media (max-width: 640px) {
+    .site-footer .footer-inner { padding: 16vh 6vw 2.5rem; }
+    .social-link { width: 40px; height: 40px; }
+}
+
+/* Projects Section */
+.projects {
+    padding: 10vh 10vw;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.projects-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projects-title {
+    font-size: 2.4rem;
+    color: white;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.project-card a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.2rem 1.6rem;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    transition: background 150ms ease, transform 150ms ease;
+}
+
+.project-card a:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-3px);
+}
+
+.project-card .arrow {
+    opacity: 0.6;
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.project-card a:hover .arrow {
+    transform: translateX(6px);
+    opacity: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .projects {
+        padding: 8vh 6vw;
+    }
+
+    .projects-title {
+        font-size: 2rem;
+    }
+
+    .project-card a {
+        font-size: 1.1rem;
+        padding: 1rem 1.3rem;
+    }
+}
+
+/* Icons style */
+
+.icon {
+    display: inline-block;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.icon:hover {
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.icon.linkedin {
+    background-image: url("data:image/svg+xml;utf8,\
+<svg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>\
+<path d='M4.98 3.5C4.98 4.60457 4.10457 5.48 3 5.48C1.89543 5.48 1.02 4.60457 1.02 3.5C1.02 2.39543 1.89543 1.52 3 1.52C4.10457 1.52 4.98 2.39543 4.98 3.5Z' fill='%23ffffff'/>\
+<path d='M0.5 8.5H5.5V23.5H0.5V8.5Z' fill='%23ffffff'/>\
+<path d='M8.5 8.5H13.1V10.3H13.2C13.98 9.14 15.66 7.9 18.06 7.9C22.22 7.9 23 10.62 23 14.68V23.5H18V15.6C18 13.58 17.62 11.9 15.1 11.9C12.6 11.9 12 13.88 12 15.48V23.5H7V8.5H8.5Z' fill='%23ffffff'/>\
+</svg>");
+}
+
+.icon.email {
+    background-image: url("data:image/svg+xml;utf8,\
+<svg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>\
+<path d='M3.5 5H20.5C21.3284 5 22 5.67157 22 6.5V17.5C22 18.3284 21.3284 19 20.5 19H3.5C2.67157 19 2 18.3284 2 17.5V6.5C2 5.67157 2.67157 5 3.5 5Z' stroke='%23ffffff' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>\
+<path d='M22 6.5L12 13.5L2 6.5' stroke='%23ffffff' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>\
+</svg>");
 }
 
