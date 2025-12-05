@@ -1,0 +1,10 @@
+{
+    "name": "Game Developer Portfolio",
+    "thumbnails": [
+        {
+            "animated": ".../images/projects/game-dev-portfolio/thumb-anim.gif",
+            "static": ".../images/projects/game-dev-portfolio/thumb-static.jpg"
+        }
+    ],
+    "mobileBehavior": "static-only"
+}

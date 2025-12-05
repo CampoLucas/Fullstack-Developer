@@ -1,0 +1,12 @@
+{
+    "projects": [
+        {
+            "id": "greatest-movies",
+            "ref": "./greatest-movies.json"
+        },
+        {
+            "id": "game-dev-portfolio",
+            "ref": "./game-dev-portfolio.json"
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Portfolio</title>
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+    <main>
+        <!-- Hero Page -->
+        <section class="hero-page" id="hero-page">
+            <div id="particles-background"></div>
+            <div class="hero-top" id="hero-top">
+                <div class="hero-content">
+                    <div class="gradient"></div>
+                </div>
+            </div>
+            <div class="hero-center" id="hero-center">
+                <div class="hero-content">
+                    <div class="hero-text">
+                    <p class="greet">Hi,</p>
+                    <h1>I'm <span class="accent">Your Name</span></h1>
+                    <h2>Full-Stack Developer</h2>
+                    <button class="cta-btn">Contact</button>
+                </div>
+
+                <img src="./assets/images/about/profile-pic.jpeg" class="profile-pic">
+                </div>
+                
+            </div>
+            <div class="hero-bottom" id="hero-bottom">
+                <div class="hero-content">
+                    <div class="gradient"></div>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <section class="hero-page" id="hero-page">
+            
+        </section>
+        <!-- Projects -->
+        <!-- <section class="projects-page" id="projects-page">
+
+        </section> -->
+    </main>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        // Get CSS variables
+        const rootStyles = getComputedStyle(document.documentElement);
+        const heroBg = rootStyles.getPropertyValue('--hero-page-bg').trim();
+
+        tsParticles.load("particles-background", {
+            background: {
+                color: heroBg
+            },
+            particles: {
+                number: {
+                    value: 80,
+                    density: { enable: true, area: 800 }
+                },
+                color: { value: "#ffffff" },
+                links: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.3,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.2
+                }
+            },
+            interactivity: {
+                events: {
+                    onHover: { enable: true, mode: "grab" }
+                },
+                modes: {
+                    grab: { distance: 200 }
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>
