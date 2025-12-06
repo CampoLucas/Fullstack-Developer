@@ -29,7 +29,7 @@ body {
 }
 
 .profile-pic {
-    --profile-pic-size: clamp(5em, 25vw, 20em);
+    --profile-pic-size: clamp(5em, 25svw, 20em);
     --profile-pic-shadow: rgb(38, 20, 74);
     width: var(--profile-pic-size);
     height: auto;
@@ -61,7 +61,7 @@ body {
 
 .hero-page {
     position: relative;
-    height: 100dvh;
+    height: 100svh;
     width: 100%;
     overflow: hidden;
     background-position: center;
@@ -99,7 +99,7 @@ body {
 .hero-top .gradient,
 .hero-center .gradient,
 .hero-bottom .gradient {
-    height: 20vh;
+    height: 20svh;
 }
 
 .hero-top .gradient{
@@ -124,13 +124,13 @@ body {
 }
 
 .hero-center .hero-content {
-    padding-inline: 25dvw;
-    padding-bottom: 15dvh;
+    padding-inline: 25svw;
+    padding-bottom: 15svh;
     
 }
 
 .hero-text {
-    --text-scale: clamp(0.8rem, 1.5vw, 2rem);
+    --text-scale: clamp(0.8rem, 1.5svw, 2rem);
     font-size: var(--text-scale);
 }
 
@@ -146,7 +146,7 @@ body {
     color: #ff4141;
 }
 .hero-text h2 {
-    font-size: clamp(1.2rem, 3.5vw, 2rem);
+    font-size: clamp(1.2rem, 3.5svw, 2rem);
     color: white;
     opacity: 0.9;
 }
@@ -158,11 +158,11 @@ body {
     top: 0;
     left: 0;
     inset: 0;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100svw;
+    height: 100svh;
     z-index: 0;
     pointer-events: none;
-    clip-path: inset(0 0 calc(100vh - 100dvh) 0);
+    clip-path: inset(0 0 calc(100svh - 100svh) 0);
 }
 
 .hero-page > * {
@@ -200,44 +200,44 @@ body {
     }
 
     .hero-text {
-        --text-scale: clamp(1rem, 2vw, 3rem);
+        --text-scale: clamp(1rem, 2svw, 3rem);
         font-size: var(--text-scale);
     }
 
     .hero-center .hero-content {
-        padding-inline: 15dvw;
-        padding-bottom: 5dvh;
+        padding-inline: 15svw;
+        padding-bottom: 5svh;
     }
 
     .profile-pic {
-        width: clamp(15vw, 25vw, 50vw);
+        width: clamp(15svw, 25svw, 50svw);
         height: auto;
     }
 
     .hero-top .gradient,
     .hero-center .gradient,
     .hero-bottom .gradient {
-        height: 15vh;
+        height: 15svh;
     }
 }
 
 @media only screen and (orientation: portrait) and (max-width: 450px) {
     .profile-pic {
-        width: 60vw;
+        width: 60svw;
     }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 1000px){
     .hero-center .hero-content {
-        padding-inline: 15dvw;
-        padding-bottom: 15dvh;
+        padding-inline: 15svw;
+        padding-bottom: 15svh;
         
     }
 
     .hero-top .gradient,
     .hero-center .gradient,
     .hero-bottom .gradient {
-        height: 15vh;
+        height: 15svh;
     }
 }
 
@@ -249,7 +249,7 @@ body {
 
 .site-footer .footer-inner {
     margin: 0 auto;
-    padding-top: 24vh;
+    padding-top: 24svh;
     padding-bottom: 3.5rem;
     display: flex;
     flex-direction: column;
@@ -326,13 +326,13 @@ body {
 .contact-sep { opacity: 0.5; }
 
 @media (max-width: 640px) {
-    .site-footer .footer-inner { padding: 16vh 6vw 2.5rem; }
+    .site-footer .footer-inner { padding: 16svh 6svw 2.5rem; }
     .social-link { width: 40px; height: 40px; }
 }
 
 /* Projects Section */
 .projects {
-    padding: 10vh 10vw;
+    padding: 10svh 10svw;
     background: rgba(255,255,255,0.03);
     backdrop-filter: blur(4px);
     border-top: 1px solid rgba(255,255,255,0.1);
@@ -394,7 +394,7 @@ body {
 /* Mobile adjustments */
 @media (max-width: 600px) {
     .projects {
-        padding: 8vh 6vw;
+        padding: 8svh 6svw;
     }
 
     .projects-title {
