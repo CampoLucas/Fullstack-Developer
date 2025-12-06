@@ -1,0 +1,76 @@
+.gradient {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    pointer-events: none;
+}
+
+.icons-container {
+    display: flex;
+    gap: 1.2rem;
+    padding: 1.5rem 7%;
+}
+
+.profile-pic {
+    --profile-pic-size: clamp(5em, 25svw, 20em);
+    --profile-pic-shadow: rgb(38, 20, 74);
+    width: var(--profile-pic-size);
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 calc(var(--profile-pic-size) * .5) var(--profile-pic-shadow);
+}
+
+.cta-btn {
+    background: #ff4141;
+    color: white;
+    padding: 12px 26px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cta-btn.more {
+    background-color: #802525;
+    margin-top: 10px;
+    padding: 12px 12px;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 600px) {
+    .profile-pic {
+        width: clamp(15svw, 25svw, 50svw);
+        height: auto;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 450px) {
+    .profile-pic {
+        width: 60svw;
+    }
+}
+
+/* Icons style */
+
+.icon {
+    display: inline-block;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.icon:hover {
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.icon.linkedin {
+    background-image: url("../images/icons/linkedin.svg");
+}
+
+.icon.email {
+    background-image: url("../images/icons/email.svg");
+}
