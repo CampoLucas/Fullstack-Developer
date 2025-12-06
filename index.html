@@ -24,7 +24,6 @@
                     <h1>I'm <span class="accent">Lucas Campo</span></h1>
                     <h2>Full-Stack Developer</h2>
                     <a href="#contact" class="cta-btn">Contact</a>
-                    <a href="https://campolucas.github.io/" class="cta-btn more">More</a>
                 </div>
 
                 <img src="./assets/images/about/profile-pic.jpeg" class="profile-pic">
@@ -40,9 +39,49 @@
             </div>
         </section>
 
-        <!-- Projects -->
-        <section class="projects">
-            <div class="projects-inner">
+        <section class="background content">
+            
+            
+            <section class="inner">
+                <h2 class="text title">About Me</h2>
+                <ul class="about-me-container">
+                    <li class="about-me-text">
+                        <p class="text description">Hey! I'm a gameplay programmer with over two years of experience. I focus on building solid and flexible architecture, with a strong interest in AI behaviors, gameplay systems, and complex mechanics.</p>
+                        <p class="text description">I've always been drawn to games that reward curiosity and skill, and I try to bring that same mindset into my work. For me, programming isn't just about making things function, it's about helping the player feel something through how the game responds.</p>
+                        
+                        
+                        <div class="contact-info" style="padding-bottom: 2rem;">
+                            <a href="mailto:campolucas2001@gmail.com" class="contact-link">campolucas2001@gmail.com</a>
+                            <span class="contact-sep">•</span>
+                            <a href="tel:+541127403576" class="contact-link">+54 11 2740-3576</a>
+                        </div>
+
+                        <div class="social" style="justify-content: center;">
+                            <a class="icon linkedin social-link" href="https://www.linkedin.com/in/lucascampo3333/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"></a>
+                            <a class="icon github social-link" href="https://github.com/CampoLucas" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"></a>
+                            <a class="icon email social-link" href="mailto:campolucas2001@gmail.com" aria-label="Send email"></a>
+                            <a class="icon website social-link" href="https://campolucas.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Game developer portfolio"></a>                            
+                        </div>
+                    </li>
+                    <li class="about-me-image">
+                        <img src="./assets/images/about/profile-pic.jpeg" />
+                    </li>
+                </ul>
+            </section>
+            <!-- <div class="section-separator">
+                <span class="section-separator__line"></span>
+            </div>
+
+            <section class="inner">
+                <h2 class="text title">Experience</h2>
+                <p></p>
+            </section> -->
+
+            <div class="section-separator">
+                <span class="section-separator__line"></span>
+            </div>
+
+            <section class="inner">
                 <h2 class="projects-title">Projects</h2>
 
                 <ul class="projects-list">
@@ -53,7 +92,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </section>
         </section>
     </main>
 
@@ -68,56 +107,13 @@
                 <div class="contact-info">
                     <a href="mailto:campolucas2001@gmail.com" class="contact-link">campolucas2001@gmail.com</a>
                     <span class="contact-sep">•</span>
-                    <a href="tel:+1234567890" class="contact-link">+54 11 2740-3576</a>
+                    <a href="tel:+541127403576" class="contact-link">+54 11 2740-3576</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-        // Get CSS variables
-        const rootStyles = getComputedStyle(document.documentElement);
-        const heroBg = rootStyles.getPropertyValue('--hero-page-bg').trim();
-        const particleColor = rootStyles.getPropertyValue('--particle-color').trim();
-        const particleLinksColor = rootStyles.getPropertyValue('--particle-links-color').trim();
-        const particleWidth = rootStyles.getPropertyValue('--particle-width').trim();
-
-        tsParticles.load("particles-background", {
-            fullScreen: { enable: false },
-            background: {
-                color: heroBg
-            },
-            particles: {
-                number: {
-                    value: 80,
-                    density: { enable: true, area: 800 }
-                },
-                color: { value: particleColor },
-                links: {
-                    enable: true,
-                    distance: 150,
-                    color: particleLinksColor,
-                    opacity: 0.3,
-                    width: particleWidth
-                },
-                move: {
-                    enable: true,
-                    speed: 1.2
-                }
-            },
-            interactivity: {
-                events: {
-                    onHover: { enable: true, mode: "grab" }
-                },
-                modes: {
-                    grab: { distance: 200 }
-                }
-            }
-        });
-    });
-    </script>
+    <script src="./assets/js/particles.js"></script>
 
 </body>
 </html>

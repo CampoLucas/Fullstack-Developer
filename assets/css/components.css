@@ -55,14 +55,57 @@
 }
 
 /* Icons style */
-
-.icon {
-    display: inline-block;
-    background-position: center; 
-    background-repeat: no-repeat;
+.social {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    z-index: 9;
 }
 
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 140ms ease, background 140ms ease;
+    z-index: 9;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.12);
+    z-index: 9;
+}
+
+.social-link svg { display: block; }
+
+.contact-info { 
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+.contact-link {
+    color: #f3f3f3;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 9;
+    font-size: 1rem;
+}
+
+.contact-sep { opacity: 0.5; }
+
+
+.icon,
 .icon:hover {
+    display: inline-block;
     background-position: center; 
     background-repeat: no-repeat;
 }
@@ -71,6 +114,64 @@
     background-image: url("../images/icons/linkedin.svg");
 }
 
+
+
 .icon.email {
     background-image: url("../images/icons/email.svg");
 }
+
+.icon.github {
+    background-image: url("../images/icons/github.svg");
+}
+
+.icon.link {
+    background-image: url("../images/icons/link.svg");
+}
+
+.icon.smart-phone {
+    background-image: url("../images/icons/smart-phone.svg");
+}
+
+.icon.itch {
+    background-image: url("../images/icons/itch.svg");
+}
+
+.icon.website {
+    background-image: url("../images/icons/website.svg");
+}
+
+.section-separator {
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.section-separator__line {
+    width: min(520px, 85%);
+    height: 3px;
+    background: radial-gradient(circle at center,
+        rgba(255, 255, 255, 0.35) 0%,
+        rgba(255, 255, 255, 0.15) 40%,
+        rgba(255, 255, 255, 0) 70%
+    ),
+    linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0)
+    );
+}
+
+@media (max-width: 640px) {
+    .social-link { 
+        width: 40px; 
+        height: 40px; 
+    }
+
+    .contact-link {
+        font-size: .95rem;
+    }
+}
+
+

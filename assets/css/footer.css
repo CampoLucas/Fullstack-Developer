@@ -35,53 +35,6 @@
     z-index: 9;
 }
 
-.social {
-    display: flex;
-    gap: 0.6rem;
-    align-items: center;
-    z-index: 9;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.06);
-    color: #fff;
-    text-decoration: none;
-    transition: transform 140ms ease, background 140ms ease;
-    z-index: 9;
-}
-
-.social-link:hover {
-    transform: translateY(-3px);
-    background: rgba(255,255,255,0.12);
-    z-index: 9;
-}
-
-.social-link svg { display: block; }
-
-.contact-info { 
-    display: flex;
-    gap: 0.6rem;
-    align-items: center;
-    justify-content: center;
-    z-index: 9;
-}
-
-.contact-link {
-    color: #f3f3f3;
-    text-decoration: none;
-    font-weight: 600;
-    z-index: 9;
-}
-
-.contact-sep { opacity: 0.5; }
-
 @media (max-width: 640px) {
     .site-footer .footer-inner { padding: 16svh 6svw 2.5rem; }
-    .social-link { width: 40px; height: 40px; }
 }

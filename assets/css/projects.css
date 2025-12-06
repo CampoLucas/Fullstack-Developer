@@ -1,9 +1,159 @@
-.projects {
+/* background section */
+
+.background {
+    background: rgba(255, 255, 255, .03);
+    backdrop-filter: blur(4px);
+}
+
+.background.content {
+    padding: 10svh 10svw;
+    border-top: 1px solid rgba(255, 255, 255, .1); 
+}
+
+.inner {
+    max-width: 900x;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+/* typography */
+
+.text {
+    color: white;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+}
+
+.text.title {
+    font-size: 2.4rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.description {
+    font-size: 1.2rem;
+}
+
+/* about me */
+
+.about-me-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.about-me-text {
+    flex: 1;
+    max-width: 35%;
+}
+
+.about-me-image {
+    flex: 1;
+    
+    max-width: 35%;
+    display: flex;
+    
+}
+
+.about-me-image img {
+    width: 80%;
+    max-width: 500px;
+}
+
+.about-me-text .contact-sep {
+    color: rgb(222, 222, 222);
+}
+
+@media only screen and (orientation: portrait) and (max-width: 768px) {
+    .about-me-container {
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-text,
+    .about-me-image {
+        max-width: 100%;
+    }
+
+    .about-me-image {
+        order: 0;
+        justify-content: center;
+    }
+
+    .about-me-text {
+        order: 1;
+    }
+
+    .about-me-image img {
+        width: 60%;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 768px) {
+    .about-me-container {
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-text,
+    .about-me-image {
+        max-width: 100%;
+    }
+
+    .about-me-image {
+        order: 0;
+        justify-content: center;
+    }
+
+    .about-me-text {
+        order: 1;
+    }
+
+    .about-me-image img {
+        width: 60%;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
+    .about-me-container {
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-text,
+    .about-me-image {
+        max-width: 100%;
+    }
+
+    .about-me-image {
+        order: 0;
+        justify-content: center;
+    }
+
+    .about-me-text {
+        order: 1;
+    }
+
+    .about-me-image img {
+        width: 60%;
+    }
+}
+
+
+/* .projects {
     padding: 10svh 10svw;
     background: rgba(255,255,255,0.03);
     backdrop-filter: blur(4px);
     border-top: 1px solid rgba(255,255,255,0.1);
-}
+} */
 
 .projects-inner {
     max-width: 900px;
