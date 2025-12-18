@@ -1,0 +1,60 @@
+{
+    "projects": [
+        {
+            "baseId": "projects.rushRift",
+            "titleId": "title",
+            "category": "games",
+            "shortDescriptionId": "shortDesc",
+            "descriptionId": "desc",
+            "rolesId": "roles",
+            "thumbnails": [
+                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
+                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
+            ],
+            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
+            "imgAltId": "imgAlt"
+        },
+        {
+            "baseId": "projects.langGame",
+            "titleId": "title",
+            "category": "websites",
+            "shortDescriptionId": "shortDesc",
+            "descriptionId": "desc",
+            "rolesId": "roles",
+            "thumbnails": [
+                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
+                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
+            ],
+            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
+            "imgAltId": "imgAlt"
+        },
+        {
+            "baseId": "projects.gunBandit",
+            "titleId": "title",
+            "category": "games",
+            "shortDescriptionId": "shortDesc",
+            "descriptionId": "desc",
+            "rolesId": "roles",
+            "thumbnails": [
+                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
+                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
+            ],
+            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
+            "imgAltId": "imgAlt"
+        },
+        {
+            "baseId": "projects.shipGame",
+            "titleId": "title",
+            "category": "games",
+            "shortDescriptionId": "shortDesc",
+            "descriptionId": "desc",
+            "rolesId": "roles",
+            "thumbnails": [
+                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
+                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
+            ],
+            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
+            "imgAltId": "imgAlt"
+        }
+    ]
+}

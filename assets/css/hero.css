@@ -54,23 +54,31 @@
 .hero-content {
     width: 100%;
     width: 100%;
-    padding: 0 12%;
+    /* padding: 0 12%; */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 5rem;
+    justify-content: center;
     pointer-events: auto; 
     box-sizing: border-box;
+    align-items: center;
 }
 
 .hero-center .hero-content {
-    padding-inline: 25svw;
     padding-bottom: 15svh;
     
 }
 
+.hero-title {
+    white-space: nowrap;
+}
+
 .hero-text {
+    display: flex;
+    flex: 15svw 1 110px;
+    flex-direction: column;
     --text-scale: clamp(0.8rem, 1.5svw, 2rem);
     font-size: var(--text-scale);
+    
 }
 
 .hero-text .greet {
@@ -81,6 +89,8 @@
 .hero-text h1 {
     font-size: 2em;
     color: white;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
 }
 
 .hero-text .accent {
@@ -96,6 +106,33 @@
 .hero-page > * {
     
     z-index: 1; /* ensures text + image stay above particles */
+}
+
+.hero-roles {
+    color: aliceblue; 
+    list-style: none; 
+    display: flex; 
+    gap: 1rem;
+    padding: 0;
+}
+
+.hero-contact {
+    display: flex;
+}
+
+@media (max-width: 640px) or (max-width: 1000px) {
+    .hero-roles {
+        flex-direction: column;
+        gap: .25rem;
+        font-size: larger;
+    }
+    
+    .hero-role.ceparator {
+        display: none;
+    }
+
+    .hero-contact {
+    }
 }
 
 @media only screen and (orientation: portrait) and (max-width: 600px) {
@@ -133,7 +170,8 @@
 
     .hero-center .hero-content {
         padding-inline: 15svw;
-        padding-bottom: 5svh;
+        padding-bottom: 0;
+        gap: 1.25rem;
     }
 
     .hero-top .gradient,
@@ -142,7 +180,12 @@
         height: 15svh;
     }
 
-    @media only screen and (orientation: landscape) and (max-width: 1000px){
+    .hero-contact {
+        align-self: center;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1000px){
     .hero-center .hero-content {
         padding-inline: 15svw;
         padding-bottom: 15svh;
@@ -154,5 +197,6 @@
     .hero-bottom .gradient {
         height: 15svh;
     }
-}
+
+    
 }

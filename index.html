@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full-Stack Portfolio</title>
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/throbber.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
-<body>
+<body id="app" aria-busy="true">
+    <div class="loaderWrap" role="status" aria-live="polite" aria-label="Loading">
+        <div class="throbber-container">
+            <div class="throbber pulse" aria-hidden="true"></div>
+            <div class="hint" id="loadingText">Loading</div>
+        </div>
+    </div>
+
     <main>
         <!-- Hero Page -->
         <section class="hero-page" id="hero-page">
@@ -20,22 +28,27 @@
             <div class="hero-center" id="hero-center">
                 <div class="hero-content">
                     <div class="hero-text">
-                    <p class="greet">Hi,</p>
-                    <h1>I'm <span class="accent">Lucas Campo</span></h1>
-                    <h2>Full-Stack Developer</h2>
-                    <a href="#contact" class="cta-btn">Contact</a>
-                </div>
+                        <h1 id="hero-title" class="hero-title">I'm <span class="accent">Lucas Campo</span></h1>
+                        
+                        <ul id="hero-roles" class="hero-roles">
+                            <li class="hero-role">Game Developer</li>
+                            <li class="hero-role ceparator">|</li>
+                            <li class="hero-role">Full-Stack Developer</li>
+                        </ul>
+                        <!-- <h2 id="hero-title">Full-Stack Developer</h2> -->
+                        <div class="hero-contact">
+                            <a href="#contact" class="cta-btn">Contact</a>
+                        </div>
+                    </div>
 
-                <img src="./assets/images/about/profile-pic.jpeg" class="profile-pic">
+                    <img id="hero-pic" src="" class="profile-pic">
                 </div>
                 
             </div>
             <div class="hero-bottom" id="hero-bottom">
                 <div class="hero-content">
                     <div class="gradient"></div>
-                </div>
-                
-                
+                </div> 
             </div>
         </section>
 
@@ -43,39 +56,37 @@
             
             
             <section class="inner">
-                <h2 class="text title">About Me</h2>
+                <h2 id="about-title" class="text title">About Me</h2>
                 <ul class="about-me-container">
-                    <li class="about-me-text">
+                    <li id="about-desc" class="about-me-text">
                         <p class="text description">Hey! I'm a gameplay programmer with over two years of experience. I focus on building solid and flexible architecture, with a strong interest in AI behaviors, gameplay systems, and complex mechanics.</p>
                         <p class="text description">I've always been drawn to games that reward curiosity and skill, and I try to bring that same mindset into my work. For me, programming isn't just about making things function, it's about helping the player feel something through how the game responds.</p>
-                        
-                        
-                        <div class="contact-info" style="padding-bottom: 2rem;">
-                            <a href="mailto:campolucas2001@gmail.com" class="contact-link">campolucas2001@gmail.com</a>
-                            <span class="contact-sep">•</span>
-                            <a href="tel:+541127403576" class="contact-link">+54 11 2740-3576</a>
-                        </div>
-
-                        <div class="social" style="justify-content: center;">
-                            <a class="icon linkedin social-link" href="https://www.linkedin.com/in/lucascampo3333/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"></a>
-                            <a class="icon github social-link" href="https://github.com/CampoLucas" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"></a>
-                            <a class="icon email social-link" href="mailto:campolucas2001@gmail.com" aria-label="Send email"></a>
-                            <a class="icon website social-link" href="https://campolucas.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Game developer portfolio"></a>                            
-                        </div>
                     </li>
-                    <li class="about-me-image">
-                        <img src="./assets/images/about/profile-pic.jpeg" />
-                    </li>
+                    <!-- <li class="about-me-image">
+                        <img id="about-pic" src="./assets/images/about/profile-pic.jpeg" />
+                    </li> -->
                 </ul>
+                <div id="about-contacts" class="contact-info" style="padding-bottom: 2rem;">
+                    <a href="mailto:campolucas2001@gmail.com" class="contact-link">campolucas2001@gmail.com</a>
+                    <span class="contact-sep">•</span>
+                    <a href="tel:+541127403576" class="contact-link">+54 11 2740-3576</a>
+                </div>
+
+                <div id="about-buttons" class="social" style="justify-content: center;">
+                    <a class="icon linkedin social-link" href="https://www.linkedin.com/in/lucascampo3333/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"></a>
+                    <a class="icon github social-link" href="https://github.com/CampoLucas" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"></a>
+                    <a class="icon email social-link" href="mailto:campolucas2001@gmail.com" aria-label="Send email"></a>
+                    <a class="icon website social-link" href="https://campolucas.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Game developer portfolio"></a>                            
+                </div>
             </section>
-            <!-- <div class="section-separator">
+            <div class="section-separator">
                 <span class="section-separator__line"></span>
             </div>
 
             <section class="inner">
                 <h2 class="text title">Experience</h2>
                 <p></p>
-            </section> -->
+            </section>
 
             <div class="section-separator">
                 <span class="section-separator__line"></span>
@@ -119,7 +130,8 @@
         </div>
     </footer>
 
-    <script src="./assets/js/particles.js"></script>
+    <script src="./src/particles/particles.js"></script>
+    <script type="module" src="./src/core/App.js"></script>
 
 </body>
 </html>

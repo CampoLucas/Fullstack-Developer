@@ -1,0 +1,57 @@
+{
+    "hero": {
+        "baseId": "hero",
+        "titleId": "title",
+        "rolesId": "roles",
+        "picture": { "img": "https://media.gq.com.mx/photos/63dfdcc493c9fe36c9a8ebe7/1:1/w_2000,h_2000,c_limit/adam-sandler-looks-para-un-estilo-informal-y-exitoso.jpg", "altId": "imgAlt" }
+    },
+    "about": {
+        "baseId": "about",
+        "descriptionId": "description",
+        "contact": { "email": "campolucas2001@gmail.com", "phone": "+54 11 2740-3576" },
+        "buttons": [
+            { 
+                "id": "linked-in",
+                "link": "https://www.linkedin.com/in/lucascampo3333/", 
+                "icon": "linkedin", 
+                "hoverTextId": "linkedInHover",
+                "label": "",
+                "type": "link"
+            },
+            { 
+                "id": "github", 
+                "link": "https://github.com/CampoLucas", 
+                "icon": "github", 
+                "hoverTextId": "githubHover",
+                "label": "",
+                "type": "link"
+            },
+            { 
+                "id": "mail", 
+                "link": "campolucas2001@gmail.com", 
+                "icon": "email", 
+                "hoverTextId": "emailHover",
+                "label": "",
+                "type": "email"
+            },
+            { 
+                "id": "itch", 
+                "link": "https://luinbucket.itch.io/", 
+                "icon": "itch", 
+                "hoverTextId": "itchHover",
+                "label": "",
+                "type": "link"
+            },
+            { 
+                "id": "portfolio", 
+                "link": "https://campolucas.github.io/", 
+                "icon": "website", 
+                "hoverTextId": "portfolioHover",
+                "label": "",
+                "type": "link"
+            }
+        ],
+        "picture": { "img": "https://images.hobbydb.com/processed_uploads/subject_photo/subject_photo/image/138021/Adam-Sandler-getty-H-2023_png.new0f7be117-12a1-4121-bdc3-ffd988ca5b8d_large.png", "altId": "imgAlt" }
+    }
+}
+

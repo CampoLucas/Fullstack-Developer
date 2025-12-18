@@ -28,7 +28,7 @@
     color: white;
     padding: 12px 26px;
     border-radius: 6px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-size: 1rem;
     border: none;
     cursor: pointer;
@@ -69,20 +69,22 @@
     width: 44px;
     height: 44px;
     border-radius: 8px;
-    background: rgba(255,255,255,0.06);
+    background-color: rgba(255,255,255,0.06);
     color: #fff;
     text-decoration: none;
-    transition: transform 140ms ease, background 140ms ease;
+    transition: transform 140ms ease, background-color 140ms ease;
     z-index: 9;
 }
 
 .social-link:hover {
     transform: translateY(-3px);
-    background: rgba(255,255,255,0.12);
+    background-color: rgba(255,255,255,0.12);
     z-index: 9;
 }
 
-.social-link svg { display: block; }
+.social-link svg { 
+    display: block; 
+}
 
 .contact-info { 
     display: flex;
@@ -100,7 +102,10 @@
     font-size: 1rem;
 }
 
-.contact-sep { opacity: 0.5; }
+.contact-sep { 
+    color: #f3f3f3;
+    /* opacity: 0.5;  */
+}
 
 
 .icon,
@@ -111,33 +116,33 @@
 }
 
 .icon.linkedin {
-    background-image: url("../images/icons/linkedin.svg");
+    background-image: url("../img/icons/linkedin.svg");
 }
 
 
 
 .icon.email {
-    background-image: url("../images/icons/email.svg");
+    background-image: url("../img/icons/email.svg");
 }
 
 .icon.github {
-    background-image: url("../images/icons/github.svg");
+    background-image: url("../img/icons/github.svg");
 }
 
 .icon.link {
-    background-image: url("../images/icons/link.svg");
+    background-image: url("../img/icons/link.svg");
 }
 
 .icon.smart-phone {
-    background-image: url("../images/icons/smart-phone.svg");
+    background-image: url("../img/icons/smart-phone.svg");
 }
 
 .icon.itch {
-    background-image: url("../images/icons/itch.svg");
+    background-image: url("../img/icons/itch.svg");
 }
 
 .icon.website {
-    background-image: url("../images/icons/website.svg");
+    background-image: url("../img/icons/website.svg");
 }
 
 .section-separator {
@@ -171,6 +176,10 @@
 
     .contact-link {
         font-size: .95rem;
+    }
+
+    #about-contacts .contact-link {
+        font-size: .8rem;
     }
 }
 

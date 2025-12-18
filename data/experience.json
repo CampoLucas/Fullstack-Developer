@@ -1,0 +1,15 @@
+{
+    "experience": [
+        {
+            "baseId": "experience.threeDar",
+            "companyId": "company",
+            "productId": "product",
+            "periodId": "period",
+            "roleId": "role",
+            "descriptionId": "desc",
+            "contributionsId": "contributions",
+            "imges": [ "image01.jpeg", "image02.jpeg" ],
+            "imgAltId": "imgAlt"
+        }
+    ]
+}

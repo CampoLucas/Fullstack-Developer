@@ -1,0 +1,100 @@
+{
+    "hero": {
+        "title": [
+            { "text": "I'm ", "style": "normal" },
+            { "text": "Lucas Campo", "style": "accent" }
+        ],
+        "roles": [ "Game Developer", "Full-Stack Developer" ],
+        "imgAlt": "Profile picture"
+    },
+    "about": {
+        "description": [
+            "Hey! I'm a gameplay programmer with over two years of experience. I focus on building solid and flexible architecture, with a strong interest in AI behaviors, gameplay systems, and complex mechanics.",
+            "I've always been drawn to games that reward curiosity and skill, and I try to bring that same mindset into my work. For me, programming isn't just about making things function, it's about helping the player feel something through how the game responds."
+        ],
+        "imgAlt": "About picture",
+        "linkedInHover": "Check out my LinkedIn!",
+        "githubHover": "Check out my github!",
+        "emailHover": "Contact me!",
+        "itchHover": "Check out my Games!",
+        "portfolioHover": "Previous portfolio"
+    },
+    "experience": {
+        "threeDar": {
+            "company": "3Dar",
+            "product": "Eggscape",
+            "period": [ "May 2023", "Feb 2025" ],
+            "role": "Gameplay Programmer",
+            "desc": [
+                "Worked on an AR/VR multiplayer platformer game, called Eggscape, that received the 'Lion in la Biennale di Venezia' in 2022"
+            ],
+            "contributions": [
+                { "title": "Enemy AI", "desc": "Implemented the enemies AI in the game, everything from specific behaviors like path finding to combat." },
+                { "title": "Player Mechanics", "desc": "Built and implemented parkour and combat systems." },
+                { "title": "Maintenance & Optimization", "desc": "Fixed gameplay bugs and improved performance." },
+                { "title": "Multiplayer & AR/VR Integration", "desc": "Multiplayer & AR/VR Integration" }
+            ],
+            "imgAlt": "Eggscape showcase image"
+        }
+    },
+    "projects": {
+        "rushRift": {
+            "title": "Rush Rift",
+            "shortDesc": "A fast-paced first-person action game centered on momentum and precision.",
+            "desc": [
+                "As Lead Programmer, I developed the core movement, dash, and attack systems, as well as the additive level-loading architecture, focusing on scalability, performance, and clean modular code in Unity."
+            ],
+            "roles": [ "Lead Programmer" ],
+            "imgAlt": "Rush Rift showcase"
+        },
+        "langGame": {
+            "title": "Vocab Match",
+            "shortDesc": "A web based vocabulary trainer",
+            "desc": [
+                "A JSON driven language learning game.",
+                "Supports multiple languages and game modes."
+            ],
+            "roles": [ "Frontend Programmer" ],
+            "imgAlt": "Vocab Match showcase"
+        },
+        "gunBandit": {
+            "title": "Gun Bandit",
+            "shortDesc": "A top-down shooter/puzzle game.",
+            "desc": [
+                "In Gun Bandit the player needs to complete an objective either stealthily or head on.",
+                "In this project I was the sole programmer, I was responsible for programming the player, weapon system, enemies and UI."
+            ],
+            "roles": [ "Lead Programmer" ],
+            "imgAlt": "Gun Bandit showcase"
+        },
+        "shipGame": {
+            "title": "3047",
+            "shortDesc": "A 3D shoot ‘em up with bullet hell elements.",
+            "desc": [
+                "I coded the player, damage system, UI, animations, enemies and boss behaviour."
+            ],
+            "roles": [ "Lead Programmer" ],
+            "imgAlt": "Gun Bandit showcase"
+        }
+    },
+    "skills": {
+        "sections": {
+            "programming": "Code",
+            "practices": "Skills & Practices",
+            "tools": "Tools"
+        },
+        "languages": {
+            "title": "Languages",
+            "en": { "title": "English", "desc": "Fluent" },
+            "es": { "title": "Spanish", "desc": "Native" },
+            "jp": { "title": "Japanese", "desc": "Conversational" }
+        },
+        "concepts": {
+            "title": "Programming Concepts",
+            "designPatterns": { "title": "Design patterns", "desc": "Factory, Builder, Command, Mediator, Strategy, Observer, Object Pooling" },
+            "mvcArchitecture": { "title": "MVC architecture", "desc": null },
+            "aiAlgorithms": { "title": "AI algorithms", "desc": "A*, Dijkstra, FSM, Steering Behaviors, Obstacle Avoidance, Roulette, Flocking, Decision Trees, Behavior Trees" },
+            "multiplayerArchitecture": { "title": "Multiplayer architectures", "desc": "Full-Authoritative and Non-Authoritative models" }
+        }
+    }
+}
