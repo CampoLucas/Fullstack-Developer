@@ -29,7 +29,8 @@
                 "link": "campolucas2001@gmail.com", 
                 "icon": "email", 
                 "hoverTextId": "emailHover",
-                "type": "email"
+                "type": "email",
+                "disabled": true
             },
             { 
                 "id": "itch", 

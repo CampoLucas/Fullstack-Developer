@@ -104,35 +104,6 @@ export class App {
         this.renderContactButtons(buttonsEl, about.buttons, baseId);
     }
 
-    renderContactButtons(container, buttons, baseId = null) {
-        container.innerHTML = "";
-
-        for (let i = 0; i < buttons.length; i++) {
-            const btn = buttons[i];
-
-            if (!btn) {
-                console.log(`WARNING: [renderContactButtons] Button from the index ${i} is null.`)
-                continue;
-            }
-
-            const isLink = btn.type && btn.type !== "email";
-            const a = document.createElement("a");
-            
-            
-            a.href = isLink ? btn.link : `mailto:${btn.link}`;
-            a.classList.add("icon", "social-link", btn.icon);
-            a.title = this.t(baseId, btn.hoverTextId) ?? "";
-            //a.setAttribute("aria-label", btn.label ?? null);
-
-            if (isLink) {
-                a.target = "_blank";
-                a.rel = "noopener noreferrer";
-            }
-
-            container.appendChild(a);
-        }
-    }
-
     beginLoad() {
         const app = document.getElementById("app");
         app.setAttribute("aria-busy", "true");
@@ -248,6 +219,37 @@ export class App {
             phone.textContent = contact.phone;
             if (contactClass) phone.classList.add(contactClass);
             container.appendChild(phone);
+        }
+    }
+
+    renderContactButtons(container, buttons, baseId = null) {
+        container.innerHTML = "";
+
+        for (let i = 0; i < buttons.length; i++) {
+            const btn = buttons[i];
+
+            if (!btn) {
+                console.log(`WARNING: [renderContactButtons] Button from the index ${i} is null.`)
+                continue;
+            }
+
+            if (btn.disabled) continue;
+
+            const isLink = btn.type && btn.type !== "email";
+            const a = document.createElement("a");
+            
+            
+            a.href = isLink ? btn.link : `mailto:${btn.link}`;
+            a.classList.add("icon", "social-link", btn.icon);
+            a.title = this.t(baseId, btn.hoverTextId) ?? "";
+            //a.setAttribute("aria-label", btn.label ?? null);
+
+            if (isLink) {
+                a.target = "_blank";
+                a.rel = "noopener noreferrer";
+            }
+
+            container.appendChild(a);
         }
     }
     
