@@ -34,15 +34,28 @@ export class Carousel {
 
     bind() {
         this.thumbButtons.forEach((btn, i) => {
-            btn.addEventListener('click', () => this.goTo(i));
+            btn.addEventListener('click', () => {
+                this.goTo(i);
+                this.resetAuto();
+            });
         });
 
         this.dotButtons.forEach((btn, i) => {
-            btn.addEventListener('click', () => this.goTo(i));
+            btn.addEventListener('click', () => {
+                this.goTo(i);
+                this.resetAuto();
+            });
         });
 
-        this.prevBtn.addEventListener('click', () => this.move(-1));
-        this.nextBtn.addEventListener('click', () => this.move(1));
+        this.prevBtn.addEventListener('click', () => {
+            this.move(-1);
+            this.resetAuto();
+        });
+
+        this.nextBtn.addEventListener('click', () => {
+            this.move(1);
+            this.resetAuto();
+        });
     }
 
     move(dir) {
@@ -87,5 +100,27 @@ export class Carousel {
             const offset = -(100 / this.thumbsPerView) * this.thumbStart;
             this.track.style.transform = `translateX(${offset}%)`;
         }
+    }
+
+    startAuto() {
+        if (this.autoInterval == null) return;
+
+        this.autoTimer = setInterval(() => {
+            this.move(1);
+        }, this.autoInterval);
+    }
+
+    stopAuto() {
+        if (this.autoTimer) {
+            clearInterval(this.autoTimer);
+            this.autoTimer = null;
+        }
+    }
+
+    resetAuto() {
+        if (this.autoInterval == null) return;
+
+        this.stopAuto();
+        this.startAuto();
     }
 }
