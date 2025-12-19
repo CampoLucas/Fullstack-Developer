@@ -53,11 +53,11 @@
         </section>
 
         <section class="background content" style="display: flex; justify-content: center;">
-            <div class="showcase-viewport" style="width: 80%; display: flex; justify-content: center; flex-direction: column;">
+            <div class="showcase-viewport">
 
             
                 <!-- About Me -->
-                <section class="inner" id="contact">
+                <section class="section-viewport" id="contact">
                     <h2 id="about-title" class="text title">About Me</h2>
                     <ul class="about-me-container">
                         <li id="about-desc" class="about-me-text">
@@ -87,91 +87,15 @@
                 </div>
 
                 <!-- Experience -->
-                <style>
-                    .carousel,
-                    .carousel * {
-                        box-sizing: border-box;
-                    }
-
-                    .carousel {
-                        width: 100%;
-                    }
-
-                    .carousel-viewport {
-                        width: 100%;
-                        aspect-ratio: 16 / 9;
-                        position: relative;
-                        overflow: hidden;
-                    }
-
-                    .carousel-viewport img {
-                        position: absolute;
-                        inset: 0;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        opacity: 0;
-                        transition: opacity 0.3s ease;
-                    }
-
-                    .carousel-viewport img.active {
-                        opacity: 1;
-                    }
-
-                    /* Indicators */
-
-                    .carousel-indicators {
-                        display: flex;
-                        justify-content: center;
-                        gap: 6px;
-                        padding: 8px 0;
-                    }
-
-                    .carousel-indicators button {
-                        width: 8px;
-                        height: 8px;
-                        padding: 0;
-                        border-radius: 50%;
-                        border: none;
-                        opacity: 0.4;
-                        transition: opacity 0.3s ease;
-                    }
-
-                    .carousel-indicators button.active {
-                        opacity: 1;
-                    }
-
-                    /* Mobile arrows */
-
-                    .carousel-arrows {
-                        display: none;
-                        position: absolute;
-                        inset: 0;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 0 8px;
-                        pointer-events: none;
-                    }
-
-                    .carousel-arrows button {
-                        pointer-events: auto;
-                    }
-
-                    @media (max-width: 768px) {
-                        .carousel-arrows {
-                            display: flex;
-                        }
-                    }
-                </style>
-                <section class="inner section-viewport" style="width: 100%; box-sizing: border-box; font-size: 1.25rem;">
+                <section class="section-viewport" style="">
                     <h2 class="text title section-title">Experience</h2>
-                    <div class="section-exp" style="color: aliceblue;">
+                    <div class="section-exp">
                         <div class="section-exp-title">
                             <h3>3Dar - Eggscape</h3>
                             <h4>May 2023 - Feb 2025</h4>
                         </div>
-                        <ul class="section-exp-showcase" style="display: flex; gap: 1rem; list-style-type: none; padding: 0;">
-                            <li style="width: 60%;">
+                        <ul class="section-exp-showcase" style="">
+                            <li class="carousel-container">
                                 <div class="carousel" data-carousel>
                                     <div class="carousel-viewport">
                                         <img src="./assets/img/experience/three-dar/eggscape-01.png" alt="" class="active">
@@ -180,12 +104,23 @@
                                         <img src="./assets/img/experience/three-dar/eggscape-04.png" alt="">
 
                                         <div class="carousel-arrows">
-                                            <button data-prev arial-label="Previous">‹</button>
-                                            <button data-next arial-label="Next">›</button>
+                                            <button class="left" data-prev arial-label="Previous">‹</button>
+                                            <button class="right" data-next arial-label="Next">›</button>
                                         </div>
                                     </div>
                                     
-                                    <div class="carousel-indicators">
+                                    <!-- Desktop -->
+                                    <div class="carousel-thumbs">
+                                        <div class="carousel-thumbs-track">
+                                            <button><img src="./assets/img/experience/three-dar/eggscape-01.png"></button>
+                                            <button><img src="./assets/img/experience/three-dar/eggscape-02.png"></button>
+                                            <button><img src="./assets/img/experience/three-dar/eggscape-03.png"></button>
+                                            <button><img src="./assets/img/experience/three-dar/eggscape-04.png"></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mobile -->
+                                    <div class="carousel-dots">
                                         <button data-index="0" class="active"></button>
                                         <button data-index="1"></button>
                                         <button data-index="2"></button>
@@ -193,7 +128,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="description-container">
                                 <p><strong>Role:</strong> Game Programmer</p>
                                 <p><strong>Summary:</strong> An AR/VR multiplayer platformer that received the "Lion in la Biennale di Venezia" in 2022.</p>
                                 <p><strong>Contributions</strong></p>
@@ -204,7 +139,7 @@
                                     <li><strong>Multiplayer & AR/VR Integration:</strong> Helped develop multiplayer and AR/VR features.</li>
                                 </ul>
 
-                                <div class="social" style="justify-content: start; padding-top: 2rem;">
+                                <div class="social" style="">
                                     <a class="icon meta social-link" 
                                         href="https://www.meta.com/experiences/eggscape/8895235860528889/?srsltid=AfmBOoppVZw7WgkzJgnG3FH3D0DXFqSv7HuNa3Odx-XDng9FYDOT87Dm" 
                                         target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
@@ -222,7 +157,7 @@
                     <span class="section-separator__line"></span>
                 </div>
 
-                <section class="inner">
+                <section class="section-viewport">
                     <h2 class="projects-title">Projects</h2>
 
                     <ul class="projects-list">
