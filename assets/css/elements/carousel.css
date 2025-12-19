@@ -1,0 +1,149 @@
+.carousel,
+.carousel * {
+    box-sizing: border-box;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-viewport {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-viewport img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 0;
+    bottom: 0;
+}
+
+.carousel-viewport img.active {
+    opacity: 1;
+}
+
+/* arrows */
+
+.carousel-arrows {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 8px; */
+    pointer-events: none;
+    font-size: 6rem;
+}
+
+.carousel-arrows .right {
+    background: linear-gradient(to right, rgba(0,0,0,0), var(--page-bg));
+}
+
+.carousel-arrows .right:hover {
+    background: linear-gradient(to right, rgba(0,0,0,.1), var(--page-bg));
+}
+
+.carousel-arrows .left {
+    background: linear-gradient(to left, rgba(0,0,0,0), var(--page-bg));
+}
+
+.carousel-arrows .left:hover {
+    background: linear-gradient(to left, rgba(0,0,0,.1), var(--page-bg));
+}
+
+.carousel-arrows button {
+    pointer-events: auto;
+    height: 100%;
+    width: 15%;
+    font-size: 50%;
+    border-style: none;
+    color:aliceblue;
+    transition: font-size .1s ease-in;
+}
+
+.carousel-arrows button:hover {
+    font-size: 65%;
+}
+
+@media (max-width: 768px) {
+    .carousel-arrows {
+        display: flex;
+    }
+}
+
+/* dots */
+
+.carousel-dots {
+    display: none;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 0;
+}
+
+.carousel-dots button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-dots button.active {
+    opacity: 1;
+}
+
+
+
+/* Thumbnail */
+
+.carousel-thumbs-track {
+    display: flex;
+    
+    margin-top: 8px;
+    width: 100%;
+    
+}
+
+.carousel-thumbs-track button {
+    padding-inline: 3px;
+    border: none;
+    background: none;
+    flex-shrink: 0;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-thumbs-track button.active {
+    opacity: 1;
+}
+
+.carousel-thumbs-track img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.carousel-thumbs-track {
+}
+
+@media (max-width: 768px) {
+    .carousel-thumbs {
+        display: none;
+    }
+
+    .carousel-dots {
+        display: flex;
+    }
+}

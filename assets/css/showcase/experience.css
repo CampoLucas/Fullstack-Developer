@@ -1,0 +1,40 @@
+.section-exp {
+
+}
+
+.section-exp-title {
+
+}
+
+.section-exp-showcase {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.section-exp-showcase .carousel-container {
+    width: 60%;
+}
+
+.section-exp-showcase .description-container .social {
+    justify-content: ce; 
+    padding-top: 1.5rem;
+}
+
+
+
+@media (max-width: 1000px) {
+    .section-exp-showcase {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .section-exp-showcase .carousel-container {
+        width: 100%;
+    }
+
+    .section-exp-showcase .description-container .social {
+        justify-content: center;
+    }
+}
