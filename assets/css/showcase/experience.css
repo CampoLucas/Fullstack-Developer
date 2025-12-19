@@ -22,9 +22,7 @@
     padding-top: 1.5rem;
 }
 
-
-
-@media (max-width: 1000px) {
+@media only screen and (orientation: portrait) and (max-width:640px) {
     .section-exp-showcase {
         flex-direction: column;
         justify-content: center;
@@ -34,6 +32,23 @@
         width: 100%;
     }
 
+    .section-exp-showcase .description-container .social {
+        justify-content: center;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width:1000px) {
+    .section-exp-showcase {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .section-exp-showcase .carousel-container {
+        width: 100%;
+    }
+    
+    
     .section-exp-showcase .description-container .social {
         justify-content: center;
     }

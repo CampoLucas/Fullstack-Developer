@@ -48,7 +48,7 @@ export class App {
 
         this.renderHome();
         document.querySelectorAll('[data-carousel]').forEach(el => {
-            new Carousel(el, 3, 4000);
+            new Carousel(el, 5, 4000);
         });
 
         this.endLoad();

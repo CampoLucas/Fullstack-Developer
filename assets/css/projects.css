@@ -156,13 +156,13 @@
     padding: 1.2rem 1.6rem;
     border-radius: 12px;
 
-    background: rgba(255,255,255,0.06);
+    background-color: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
 
-    transition: background 150ms ease, transform 150ms ease;
+    transition: background-color 150ms ease, transform 150ms ease;
 }
 
 .project-card a:hover {
@@ -181,7 +181,7 @@
 }
 
 /* Mobile adjustments */
-@media (max-width: 600px) {
+@media only screen and (orientation: portrait) and (max-width:640px) {
     .projects {
         padding: 8svh 6svw;
     }

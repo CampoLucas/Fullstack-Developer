@@ -35,6 +35,6 @@
     z-index: 9;
 }
 
-@media (max-width: 640px) {
+@media only screen and (orientation: portrait) and (max-width:640px) {
     .site-footer .footer-inner { padding: 16svh 6svw 2.5rem; }
 }

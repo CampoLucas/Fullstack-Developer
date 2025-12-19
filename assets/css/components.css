@@ -41,7 +41,7 @@
     padding: 12px 12px;
 }
 
-@media only screen and (orientation: portrait) and (max-width: 600px) {
+@media only screen and (orientation: portrait) and (max-width: 640px) {
     .profile-pic {
         width: clamp(15svw, 25svw, 50svw);
         height: auto;
@@ -176,7 +176,7 @@
     );
 }
 
-@media (max-width: 750px) {
+@media only screen and (orientation: portrait) and (max-width:640px) {
     .social-link { 
         width: 40px; 
         height: 40px; 

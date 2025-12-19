@@ -3,12 +3,15 @@ export class Carousel {
         this.root = root;
 
         this.images = Array.from(root.querySelectorAll('.carousel-viewport img'));
-        this.thumbButtons = Array.from(root.querySelectorAll('.carousel-thumbs button'));
+        this.thumbButtons = Array.from(root.querySelectorAll('.carousel-thumbs-track button'));
         this.dotButtons = Array.from(root.querySelectorAll('.carousel-dots button'));
 
         this.track = root.querySelector('.carousel-thumbs-track');
-        this.prevBtn = root.querySelector('[data-prev]');
-        this.nextBtn = root.querySelector('[data-next]');
+
+        this.prevButtons = root.querySelectorAll('[data-prev]');
+        this.nextButtons = root.querySelectorAll('[data-next]');
+        this.scrollTrack = root.querySelector('.carousel-thumb-scroll-track');
+        this.scrollHandle = root.querySelector('.carousel-thumb-scroll-handle');
         
         this.thumbsPerView = thumbsPerView;
         this.currentIndex = 0;
@@ -16,6 +19,11 @@ export class Carousel {
 
         this.autoInterval = autoInterval;
         this.autoTimer = null;
+
+        this.isDraggingScrollbar = false;
+        this.dragGrabOffsetPx = 0;
+
+        this.handleWidthPct = null;
         
         this.setupThumbs();
         this.bind();
@@ -24,12 +32,22 @@ export class Carousel {
     }
 
     setupThumbs() {
-        if (!this.track) return;
+        if (this.track) {
+            const w = 100 / this.thumbsPerView;
+            this.thumbButtons.forEach(btn => {
+                btn.style.flex = `0 0 ${w}%`;
+            });
+        }
 
-        const w = 100 / this.thumbsPerView;
-        this.thumbButtons.forEach(btn => {
-            btn.style.flex = `0 0 ${w}%`;
-        });
+        if (this.scrollHandle) {
+            if (!this.canScrollThumbs()) {
+                this.handleWidthPct = 100;
+            } else {
+                this.handleWidthPct = (this.thumbsPerView / this.thumbButtons.length) * 100;
+            }
+
+            this.scrollHandle.style.width = `${this.handleWidthPct}%`;
+        }
     }
 
     bind() {
@@ -47,15 +65,79 @@ export class Carousel {
             });
         });
 
-        this.prevBtn.addEventListener('click', () => {
-            this.move(-1);
-            this.resetAuto();
+        this.prevButtons.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                this.move(-1);
+                this.resetAuto();
+            });
         });
 
-        this.nextBtn.addEventListener('click', () => {
-            this.move(1);
-            this.resetAuto();
+        this.nextButtons.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                this.move(1);
+                this.resetAuto();
+            });
         });
+
+        // Dragging and scrolling
+        if (this.scrollHandle && this.scrollTrack) {
+            this.scrollHandle.addEventListener('mousedown', (e) => {
+                if (!this.canScrollThumbs()) return;
+
+                e.preventDefault();
+                this.isDraggingScrollbar = true;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!this.isDraggingScrollbar) return;
+                if (!this.canScrollThumbs()) return;
+
+                const trackRect = this.scrollTrack.getBoundingClientRect();
+
+                const handleWidthPx = trackRect.width * (this.handleWidthPct / 100);
+                const maxX = trackRect.width - handleWidthPx;
+
+                // position in track coordinates, adjusted by grab offset
+                let x = (e.clientX - trackRect.left) - this.dragGrabOffsetPx;
+                x = Math.max(0, Math.min(maxX, x));
+
+                // Convert handle position to thumbStart
+                const ratio = (maxX === 0) ? 0 : (x / maxX);
+                const maxStart = this.thumbButtons.length - this.thumbsPerView;
+
+                this.thumbStart = Math.round(ratio * maxStart);
+
+                this.update();
+                this.resetAuto();
+            });
+
+            window.addEventListener('mouseup', () => {
+                this.isDraggingScrollbar = false;
+            });
+
+            // Click on the track to jump the handle
+            this.scrollTrack.addEventListener('mousedown', (e) => {
+                // If they click the handle itself, the handle's listener will run
+                if (e.target === this.scrollHandle) return;
+                if (!this.canScrollThumbs()) return;
+
+                const trackRect = this.scrollTrack.getBoundingClientRect();
+                const handleWidthPx = trackRect.width * (this.handleWidthPct / 100);
+                const maxX = trackRect.width - handleWidthPx;
+
+                // Center the handle around the click
+                let x = (e.clientX - trackRect.left) - (handleWidthPx / 2);
+                x = Math.max(0, Math.min(maxX, x));
+
+                const ratio = (maxX === 0) ? 0 : (x / maxX);
+                const maxStart = this.thumbButtons.length - this.thumbsPerView;
+
+                this.thumbStart = Math.round(ratio * maxStart);
+
+                this.update();
+                this.resetAuto();
+            });
+        }
     }
 
     move(dir) {
@@ -73,6 +155,11 @@ export class Carousel {
 
     ensureThumbVisible() {
         if (!this.track) return;
+
+        if (!this.canScrollThumbs()) {
+            this.thumbStart = 0;
+            return;
+        }
 
         if (this.currentIndex < this.thumbStart) {
             this.thumbStart = this.currentIndex;
@@ -96,9 +183,26 @@ export class Carousel {
             btn.classList.toggle('active', i === this.currentIndex)
         );
 
+
         if (this.track) {
-            const offset = -(100 / this.thumbsPerView) * this.thumbStart;
-            this.track.style.transform = `translateX(${offset}%)`;
+            if (!this.canScrollThumbs()) {
+                this.track.style.transform = 'translateX(0%)';
+            } else {
+                const offset = -(100 / this.thumbsPerView) * this.thumbStart;
+                this.track.style.transform = `translateX(${offset}%)`;
+            }
+        }
+
+        const scrollHandle = this.root.querySelector('.carousel-thumb-scroll-handle');
+
+        if (scrollHandle) {
+            if (!this.canScrollThumbs()) {
+                scrollHandle.style.transform = 'translateX(0%)';
+            } else {
+                const handleOffset = (100 / this.thumbsPerView) * this.thumbStart;
+
+                scrollHandle.style.transform = `translateX(${handleOffset}%)`;
+            }
         }
     }
 
@@ -122,5 +226,9 @@ export class Carousel {
 
         this.stopAuto();
         this.startAuto();
+    }
+
+    canScrollThumbs() {
+        return this.thumbButtons.length > this.thumbsPerView;
     }
 }
