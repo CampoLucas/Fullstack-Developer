@@ -1,4 +1,5 @@
 import { JSONLoader } from "./JSONLoader.js";
+import { Carousel } from "../elements/Carousel.js";
 
 const dataPath = "./data";
 const langPath = "./i18n";
@@ -46,6 +47,9 @@ export class App {
         }
 
         this.renderHome();
+        document.querySelectorAll('[data-carousel]').forEach(el => {
+            new Carousel(el);
+        });
 
         this.endLoad();
     }
