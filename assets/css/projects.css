@@ -73,33 +73,6 @@
     .about-me-container {
         gap: 1rem;
         flex-direction: column;
-        text-align: center;
-    }
-
-    .about-me-text,
-    .about-me-image {
-        max-width: 100%;
-    }
-
-    .about-me-image {
-        order: 0;
-        justify-content: center;
-    }
-
-    .about-me-text {
-        order: 1;
-    }
-
-    .about-me-image img {
-        width: 60%;
-    }
-}
-
-@media only screen and (orientation: portrait) and (max-width: 768px) {
-    .about-me-container {
-        gap: 1rem;
-        flex-direction: column;
-        text-align: center;
     }
 
     .about-me-text,
@@ -125,7 +98,6 @@
     .about-me-container {
         gap: 1rem;
         flex-direction: column;
-        text-align: center;
     }
 
     .about-me-text,

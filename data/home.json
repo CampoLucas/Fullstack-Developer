@@ -15,7 +15,6 @@
                 "link": "https://www.linkedin.com/in/lucascampo3333/", 
                 "icon": "linkedin", 
                 "hoverTextId": "linkedInHover",
-                "label": "",
                 "type": "link"
             },
             { 
@@ -23,7 +22,6 @@
                 "link": "https://github.com/CampoLucas", 
                 "icon": "github", 
                 "hoverTextId": "githubHover",
-                "label": "",
                 "type": "link"
             },
             { 
@@ -31,7 +29,6 @@
                 "link": "campolucas2001@gmail.com", 
                 "icon": "email", 
                 "hoverTextId": "emailHover",
-                "label": "",
                 "type": "email"
             },
             { 
@@ -39,7 +36,6 @@
                 "link": "https://luinbucket.itch.io/", 
                 "icon": "itch", 
                 "hoverTextId": "itchHover",
-                "label": "",
                 "type": "link"
             },
             { 
@@ -47,7 +43,6 @@
                 "link": "https://campolucas.github.io/", 
                 "icon": "website", 
                 "hoverTextId": "portfolioHover",
-                "label": "",
                 "type": "link"
             }
         ],
