@@ -11,7 +11,8 @@
 .section-viewport {
     width: 100%;
     box-sizing: border-box;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    font-family: "Motiva Sans", Sans-serif;
     margin: 0 auto;
     padding-bottom: 5rem;
 }
@@ -19,5 +20,10 @@
 @media (max-width: 768px) {
     .showcase-viewport {
         width: 100%;
+        
+    }
+
+    .section-viewport {
+        font-size: 14px;
     }
 }

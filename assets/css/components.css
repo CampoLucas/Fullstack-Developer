@@ -176,18 +176,18 @@
     );
 }
 
-@media (max-width: 640px) {
+@media (max-width: 750px) {
     .social-link { 
         width: 40px; 
         height: 40px; 
     }
 
     .contact-link {
-        font-size: .95rem;
+        font-size: .85rem;
     }
 
     #about-contacts .contact-link {
-        font-size: .8rem;
+        font-size: .7rem;
     }
 }
 

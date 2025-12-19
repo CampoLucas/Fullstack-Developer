@@ -136,9 +136,10 @@
 }
 
 .carousel-thumbs-track {
+    transition: transform .25s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .carousel-thumbs {
         display: none;
     }
