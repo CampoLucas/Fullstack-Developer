@@ -124,10 +124,6 @@
         order: 2;
     }
 
-    .profile-pic {
-        order: 1;
-    }
-
     .hero-text {
         --text-scale: clamp(1rem, 2svw, 3rem);
         font-size: var(--text-scale);

@@ -74,4 +74,19 @@
     #about-contacts .contact-link {
         font-size: .7rem;
     }
+
+    .profile-pic {
+        --profile-pic-size: clamp(15svw, 25svw, 50svw);
+        height: auto;
+    }
+
+    .profile-pic {
+        order: 1;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 450px) {
+    .profile-pic {
+        --profile-pic-size: 60svw;
+    }
 }
