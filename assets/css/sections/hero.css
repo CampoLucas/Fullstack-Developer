@@ -68,41 +68,6 @@
     
 }
 
-.hero-title {
-    white-space: nowrap;
-}
-
-.hero-text {
-    display: flex;
-    flex: 15svw 1 110px;
-    flex-direction: column;
-    --text-scale: clamp(0.8rem, 1.5svw, 2rem);
-    font-size: var(--text-scale);
-    
-}
-
-.hero-text .greet {
-    font-size: 1em;
-    color: white;
-}
-
-.hero-text h1 {
-    font-size: 2em;
-    color: white;
-    margin-top: .25rem;
-    margin-bottom: .25rem;
-}
-
-.hero-text .accent {
-    color: #ff4141;
-}
-
-.hero-text h2 {
-    font-size: clamp(1.2rem, 3.5svw, 2rem);
-    color: white;
-    opacity: 0.9;
-}
-
 .hero-page > * {
     
     z-index: 1; /* ensures text + image stay above particles */

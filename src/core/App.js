@@ -86,7 +86,7 @@ export class App {
         // Description
         const aboutDescEl = document.getElementById("about-desc");
         const aboutParagraphs = this.t(baseId, about.descriptionId);
-        this.renderParagraphs(aboutDescEl, aboutParagraphs, ["text", "description"]);
+        this.renderParagraphs(aboutDescEl, aboutParagraphs, ["header-description"]);
 
         // Image
         const aboutImg = document.getElementById("about-pic");
