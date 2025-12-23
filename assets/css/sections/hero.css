@@ -35,6 +35,8 @@
     bottom: 0;
 }
 
+
+
 .hero-top .gradient,
 .hero-center .gradient,
 .hero-bottom .gradient {
@@ -65,6 +67,14 @@
 
 .hero-center .hero-content {
     padding-bottom: 15svh;
+    
+}
+
+.hero-text {
+    display: flex;
+    flex: 15svw 1 110px;
+    flex-direction: column;
+    font-size: var(--text-scale);
     
 }
 

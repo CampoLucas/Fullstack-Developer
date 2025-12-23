@@ -1,33 +1,7 @@
-/* h1.header-title {
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 1.15;
-    text-wrap: pretty;
-    background: linear-gradient(-70deg, #a2facf, #64acff);
-    background-clip: text;
-    color: transparent;
-} */
 
-.hero-title {
-    white-space: nowrap;
-}
-
-.hero-text {
-    display: flex;
-    flex: 15svw 1 110px;
-    flex-direction: column;
-    font-size: var(--text-scale);
-    
-}
-
-.hero-text .greet {
-    font-size: 1em;
-    color: white;
-}
 
 h1.header-title {
+    white-space: nowrap;
     font-size: 2em;
     color: white;
     margin-top: .25rem;
@@ -101,7 +75,7 @@ h2.title {
 }
 
 
-@media only screen and (orientation: portrait) and (max-width:640px) {
+@media ((orientation: portrait) and (max-width:640px)) or ((orientation: landscape) and (max-width:1000px)) {
     .section-viewport p,
     .section-viewport li {
         font-size: 14px;
