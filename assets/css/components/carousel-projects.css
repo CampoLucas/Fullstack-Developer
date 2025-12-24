@@ -9,9 +9,7 @@
     margin-top: 20px;
 }
 
-.projects-carousel .carousel-items > * {
-    width: 100%;
-}
+
 
 .title-grid {
     display: grid;
@@ -35,10 +33,17 @@
     position: relative;
 }
 
+/* .projects-carousel .carousel-items > * {
+    width: 100%;
+} */
+
 .projects-carousel .carousel-items{
     width: 100%;
-    display: flex;
-    gap: 12px;
+    display: block;
+    overflow: hidden;
+    padding: var(--items-padding);
+    box-sizing: border-box;
+    /* gap: var(--capsule-gap); */
     transition: opacity 400ms;
 }
 
@@ -59,50 +64,65 @@
 }
 
 /* Capsules */
+
+.website-capsule:hover,
+.game-capsule:hover {
+    z-index: 5;
+}
+
+.carousel-items {
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+    padding: var(--items-padding);
+    box-sizing: border-box;
+}
+
+
 .game-capsule,
 .website-capsule {
     position: relative;
     z-index: 1;
-    flex-grow: 0;
+    flex: 0 0 auto;
+    flex-shrink: 0;
     display: block;
     box-sizing: border-box;
+    isolation: isolate;
+    scroll-snap-align: start;
 }
 
 
 .game-capsule {
     /* capsule width - the gap */
-    width: calc((100% / var(--visible-games)) - (var(--capsule-gap) * (var(--visible-games) - 1)) / var(--visible-games));
+    --w: calc((100% / var(--visible-games)) - (var(--capsule-gap) * (var(--visible-games) - 1)) / var(--visible-games));
     /* width: calc(25% - (var(--capsule-gap) * (4 - 1)) / 4); */
-    
+    flex: 0 0 var(--w);
+    width: var(--w);
 }
 
 .website-capsule {
     /* capsule width - the gap */
-    width: calc((100% / var(--visible-websites)) - (var(--capsule-gap) * (var(--visible-websites) - 1)) / var(--visible-websites));
+    --w: calc((100% / var(--visible-websites)) - (var(--capsule-gap) * (var(--visible-websites) - 1)) / var(--visible-websites));
     /* width: calc(20% - (var(--capsule-gap) * (5 - 1)) / 5); */
+    flex: 0 0 var(--w);
+    width: var(--w);
 }
 
 .projects-carousel .game-capsule,
 .projects-carousel .website-capsule {
-    flex-shrink: 1;
+    
     scroll-snap-align: start;
 }
 
-.game-capsule .capsule-img-cnt,
-.website-capsule .capsule-img-cnt {
+.capsule-img-cnt {
     position: relative;
+    /* width: 100%; */
     display: block;
     z-index: 2;
     transition: transform 0.2s ease, z-index 0s;
     overflow: hidden;
     box-sizing: border-box;
-    object-fit: scale-down;
-}
-
-.game-capsule:hover .capsule-img-cnt,
-.website-capsule:hover .capsule-img-cnt {
-    transform: scale(1.05);
-    z-index: 3;
+    /* object-fit: scale-down; */
 }
 
 .game-capsule .capsule-img-cnt {
@@ -115,15 +135,47 @@
     background: linear-gradient(-45deg, #74747424, #dbdbdb);
 }
 
-.game-capsule .capsule-img,
-.website-capsule .capsule-img {
-    transition: opacity 0.3s;
-    position: relative;
+.game-capsule:hover .capsule-img-cnt,
+.website-capsule:hover .capsule-img-cnt {
+    transform: scale(1.05);
+    z-index: 3;
+}
+
+.game-capsule:hover .capsule-img {
+    opacity: 0;
+}
+
+.game-capsule:hover .capsule-video {
+    opacity: 1;
+}
+
+
+.capsule-img,
+.capsule-video {
+    position: absolute;
+    inset: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    object-position: center;
+
+    min-width: 0;
+    min-height: 0;
+
     -webkit-user-drag: none;
     border: none;
-    height: 100%;
-    object-fit: contain;
+
+    transition: opacity .25s ease-in-out;
+}
+
+.capsule-img {
     opacity: 1;
+}
+
+.capsule-video {
+    opacity: 0;
 }
 
 
@@ -170,26 +222,6 @@
     min-height: 37px;
 }
 
-/* Website capsule */
-.website-capsule,
-.game-capsule {
-    isolation: isolate;
-    scroll-snap-align: start;
-}
-
-.website-capsule:hover,
-.game-capsule:hover {
-    z-index: 5;
-}
-
-.carousel-items {
-    display: flex;
-    gap: 12px;
-    overflow: hidden;
-    padding: var(--items-padding);
-    box-sizing: border-box;
-}
-
 /* Arrows */
 .projects-carousel .arrow {
     position: absolute;
@@ -228,7 +260,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .carousel-items {
+    .focus {
         overflow: visible;
         overflow-x: auto;
         overflow-y: visible;
@@ -290,4 +322,8 @@
     /* :root {
         --visible-games: 2;
     } */
+}
+
+.hidden {
+    display: none;
 }
