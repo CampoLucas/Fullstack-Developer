@@ -21,25 +21,5 @@
         "emailHover": "Contacta me!",
         "itchHover": "Proba mis juegos!",
         "portfolioHover": "Anterior portfolio"
-    },
-    "experience": {
-        "title": "Experiencia",
-        "threeDar": {
-            "company": "3Dar",
-            "product": "Eggscape",
-            "period": "num-mm-yy",
-            "role": { "title": "Rol", "value": "Programador de Gameplay"},
-            "desc": { "title": "Resumen", "value": "Trabajó en un juego de plataformas multijugador AR/VR, llamado Eggscape, que recibió el 'León en la Bienal de Venecia' en 2022." },
-            "contributions": {
-                "title": "Contribuciones",
-                "list": [
-                    { "title": "IA Enemiga", "desc": "Implementé la IA de los enemigos en el juego, desde comportamientos específicos como la búsqueda de rutas hasta el combate." },
-                    { "title": "Mecánica del jugador", "desc": "Construí e implementé sistemas de parkour y combate." },
-                    { "title": "Mantenimiento y optimización", "desc": "Corregí errores del juego y mejoré el rendimiento." },
-                    { "title": "Multijugador y AR/VR", "desc": "Ayudé a desarrollar funciones multijugador y AR/VR." }
-                ]
-            },
-            "imgAlt": "Eggscape showcase image"
-        }
     }
 }
