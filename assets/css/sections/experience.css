@@ -1,13 +1,8 @@
-#experiences-cnt {
-    margin-inline: 25px;
-}
-
 .section-exp {
-
+    
 }
 
 .section-exp-title {
-
 }
 
 .section-exp ul {
@@ -50,6 +45,10 @@
 }
 
 @media only screen and (orientation: portrait) and (max-width:640px) {
+    /* #experiences-cnt {
+        margin-inline: 25px;
+    } */
+    
     .section-exp ul {
         flex-direction: column;
         justify-content: center;

@@ -35,7 +35,7 @@
 
 .carousel-arrows {
     display: none;
-    position: absolute;
+    position: relative;
     inset: 0;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +44,7 @@
     font-size: 6rem;
 }
 
-.carousel-arrows .right {
+/* .carousel-arrows .right {
     background: linear-gradient(to right, rgba(0,0,0,0), var(--page-bg));
 }
 
@@ -58,20 +58,20 @@
 
 .carousel-arrows .left:hover {
     background: linear-gradient(to left, rgba(0,0,0,.1), var(--page-bg));
-}
+} */
 
-.carousel-arrows button {
+.carousel-arrows .arrow {
     pointer-events: auto;
-    height: 100%;
-    width: 15%;
+    height: auto;
+    width: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
     font-size: 50%;
     border-style: none;
-    color:aliceblue;
+    color:rgb(61, 61, 61);
     transition: font-size .1s ease-in;
-}
-
-.carousel-arrows button:hover {
-    font-size: 65%;
+    background-color: rgba(0,0,0,0);
+    transform: translateY(-5px);
 }
 
 @media only screen and (orientation: portrait) and (max-width:600px) {

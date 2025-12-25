@@ -37,7 +37,7 @@
 @media only screen and (orientation: portrait) and (max-width:640px) {
     .showcase-viewport {
         width: 100%;
-        
+        margin-inline: 25px;
     }
 
     .section-viewport {
