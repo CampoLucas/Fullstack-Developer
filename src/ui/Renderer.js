@@ -106,9 +106,14 @@ export class Renderer {
         thirdTitle.textContent = `${baseId[experience.periodId]}`;
 
         // Add the img carousel
-        const imgContainer = clone.querySelector("#carousel-cnt");
+        const imgCnt = clone.querySelector("#carousel-cnt");
         const carouselTemp = document.getElementById("game-carousel");
-        this.addImgCarousel(imgContainer, carouselTemp, experience.images, baseId[experience.productId]);
+        this.addImgCarousel(imgCnt, carouselTemp, experience.images, baseId[experience.productId]);
+
+        // Add the experience description
+        const descCnt = clone.querySelector("#description-cnt");
+        this.renderCustomText(descCnt, baseId[experience.blocksId]);
+
     }
 
     addImgCarousel(container, template, images, alt) {
@@ -121,6 +126,8 @@ export class Renderer {
         this.carousels.push(new Carousel(clone, 5, 4000, images, alt));
     }
 
+    
+
     // Helpers
     
     t(id) {
@@ -131,7 +138,7 @@ export class Renderer {
     t(baseId, key) {
         return (
             this.app.lang?.[baseId]?.[key] ??
-            his.app.defaultLang?.[baseId]?.[key] ??
+            this.app.defaultLang?.[baseId]?.[key] ??
             null
         );
     }
@@ -160,6 +167,92 @@ export class Renderer {
 
         }
     }
+
+    renderCustomText(container, blocks) {
+        container.innerHTML = "";
+
+        if (!blocks) return;
+
+        const length = blocks.length;
+        console.log(length)
+        for (let i = 0; i < length; i++) {
+            const block = blocks[i];
+            if (!block) {
+                console.log(`WARNING: [renderCustomText] Block from the index ${i} is null.`)
+                continue;
+            }
+            console.log(block.type)
+            switch (block.type) {
+                case "desc":
+                    container.appendChild(this.getDescEl(block));
+                    break;
+                case "ul":
+                    container.appendChild(this.getUlEl(block, "list"));
+                    break;
+                case "hr-ul":
+                    container.appendChild(this.getUlEl(block, "info-tags", "info-tag"));
+                    break;
+            }
+
+        }
+        
+    }
+
+    getBlockCntEl() {
+        const cntEl = document.createElement("div");
+        cntEl.classList.add("block-cnt");
+
+        return cntEl;
+    }
+
+    getDescEl(block) {
+        const cntEl = this.getBlockCntEl();
+        
+        if (block.title) {
+            const titleEl = document.createElement("h3");
+            titleEl.textContent = block.title;
+            cntEl.appendChild(titleEl);
+        } 
+        
+        const textEl = document.createElement("p");
+        textEl.textContent = block.text;
+        cntEl.appendChild(textEl);
+
+        return cntEl;
+    }
+
+    getUlEl(block, styleClass, itemClass = null) {
+        const cntEl = this.getBlockCntEl();
+        
+        if (block.title) {
+            const titleEl = document.createElement("h3");
+            titleEl.textContent = block.title;
+            cntEl.appendChild(titleEl);
+        }
+
+        if (!block.items) return cntEl;
+
+        const ulEl = document.createElement("ul");
+        ulEl.classList.add(styleClass);
+        for (let i = 0; i < block.items.length; i++) {
+            const liEl = document.createElement("li");
+            liEl.textContent = block.items[i];
+
+            if (itemClass) {
+                liEl.classList = itemClass;
+            }
+
+            ulEl.appendChild(liEl);
+        }
+
+        cntEl.appendChild(ulEl);
+
+
+
+        return cntEl;
+    }
+
+    
 
     renderStylizedRoles(container, blocks, elementClass, ceparatorClass = null) {
         container.innerHTML = "";

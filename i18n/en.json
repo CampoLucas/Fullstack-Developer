@@ -32,12 +32,12 @@
             "imgAlt": "Eggscape showcase image",
             "blocks": [
                     { 
-                        "type": "description", 
+                        "type": "desc", 
                         "title": "Projects",
-                        "value": "AR/VR multiplayer platformer developed for Oculus, awarded the Lion at the Biennale di Venezia (2022)."
+                        "text": "AR/VR multiplayer platformer developed for Oculus, awarded the Lion at the Biennale di Venezia (2022)."
                     },
                     {
-                        "type": "list",
+                        "type": "ul",
                         "title": "Key Contributions",
                         "items": [
                             "Designed and implemented an enemy AI system using a finite state machine combined with behavior trees, supporting coordinated enemy interactions and multiple states such as idle, chase, and attack.",
@@ -47,12 +47,14 @@
                         ]
                     },
                     {
-                        "type": "horizontal-list",
+                        "type": "hr-ul",
                         "title": "Tech & Context",
                         "items": [
-                            "Unity, C#",
-                            "Authoritative multiplayer architecture",
-                            "Oculus VR, XR Toolkit"
+                            "Unity", 
+                            "C#",
+                            "Multiplayer architecture",
+                            "Oculus VR", 
+                            "XR Toolkit"
                         ]
                     }
                 ]

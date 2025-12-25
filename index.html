@@ -287,8 +287,6 @@
                     </div>
                 </div>
             </section>
-
-            
         </section></div>
     </main>
 
@@ -319,7 +317,7 @@
             </div>
 
             <ul>
-                <li id="carousel-cnt"></li>
+                <li id="carousel-cnt" class="carousel-cnt"></li>
                 <li id="description-cnt"></li>
             </ul>
         </div>
@@ -331,10 +329,6 @@
             <div class="carousel-viewport">
                 <!-- Images -->
                 <div class="carousel-img-cnt" img-cnt></div>
-                <div class="carousel-arrows">
-                    <button class="left" data-prev arial-label="Previous">‹</button>
-                    <button class="right" data-next arial-label="Next">›</button>
-                </div>
             </div>
             
             <!-- Desktop -->
@@ -349,9 +343,13 @@
                     <button class="right" data-next aria-label="Scroll thumbnails right">›</button>
                 </div>
             </div>
-
+            
             <!-- Mobile -->
-            <div class="carousel-dots" dot-cnt>
+        
+            <div class="carousel-arrows">
+                <button class="arrow left" data-prev arial-label="Previous"><span>‹</span></button>
+                <div class="carousel-dots" dot-cnt></div>
+                <button class="arrow right" data-next arial-label="Next"><span>›</span></button>
             </div>
         </div>
     </template>

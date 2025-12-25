@@ -23,6 +23,8 @@
     justify-content: center; 
     flex-direction: column;
     color: aliceblue;
+    box-sizing: border-box;
+    padding-inline: 25px;
 }
 
 .section-viewport {
@@ -37,9 +39,8 @@
 @media only screen and (orientation: portrait) and (max-width:640px) {
     .showcase-viewport {
         width: 100%;
-        
     }
-
+    
     .section-viewport {
         font-size: 14px;
         padding-bottom: 1.5rem;
