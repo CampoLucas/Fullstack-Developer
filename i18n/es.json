@@ -5,9 +5,12 @@
             { "text": "Lucas Campo", "style": "accent" }
         ],
         "roles": [ "Desarrollador de Videojuegos", "Desarrollador Full-Stack" ],
-        "imgAlt": "Imagen de perfil"
+        "imgAlt": "Imagen de perfil",
+        "contactBtn": "Contacto",
+        "contactBtnHover": "Ir a contactos"
     },
     "about": {
+        "title": "Sobre Mi",
         "description": [
             "Soy desarrollador de videojuegos con más de dos años de experiencia. Me enfoco en crear arquitecturas sólidas, flexibles y tengo un gran interes en comportamientos IA, los systemas complejos y mecanicas. Trabaje en projectos de VR/XR y multijugador, así que estoy acostumbrado a lidiar con todo tipo de problemas de rendimiento y esos casos raros que solo aparecen cuando los jugadores juegan el juego.",
             "Me gusta arreglar problemas, bugs, como pathfindings rotos, errores de sincronización extraños o mecánicas que no terminan de encajar hasta que las rehaces tres veces. Trabajo bien con diseñadores y artistas porque me importa cómo encaja todo, no solo cómo corre el código."
@@ -18,5 +21,25 @@
         "emailHover": "Contacta me!",
         "itchHover": "Proba mis juegos!",
         "portfolioHover": "Anterior portfolio"
+    },
+    "experience": {
+        "title": "Experiencia",
+        "threeDar": {
+            "company": "3Dar",
+            "product": "Eggscape",
+            "period": "num-mm-yy",
+            "role": { "title": "Rol", "value": "Programador de Gameplay"},
+            "desc": { "title": "Resumen", "value": "Trabajó en un juego de plataformas multijugador AR/VR, llamado Eggscape, que recibió el 'León en la Bienal de Venecia' en 2022." },
+            "contributions": {
+                "title": "Contribuciones",
+                "list": [
+                    { "title": "IA Enemiga", "desc": "Implementé la IA de los enemigos en el juego, desde comportamientos específicos como la búsqueda de rutas hasta el combate." },
+                    { "title": "Mecánica del jugador", "desc": "Construí e implementé sistemas de parkour y combate." },
+                    { "title": "Mantenimiento y optimización", "desc": "Corregí errores del juego y mejoré el rendimiento." },
+                    { "title": "Multijugador y AR/VR", "desc": "Ayudé a desarrollar funciones multijugador y AR/VR." }
+                ]
+            },
+            "imgAlt": "Eggscape showcase image"
+        }
     }
 }

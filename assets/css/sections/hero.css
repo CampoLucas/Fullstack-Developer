@@ -35,6 +35,8 @@
     bottom: 0;
 }
 
+
+
 .hero-top .gradient,
 .hero-center .gradient,
 .hero-bottom .gradient {
@@ -68,39 +70,12 @@
     
 }
 
-.hero-title {
-    white-space: nowrap;
-}
-
 .hero-text {
     display: flex;
     flex: 15svw 1 110px;
     flex-direction: column;
-    --text-scale: clamp(0.8rem, 1.5svw, 2rem);
     font-size: var(--text-scale);
     
-}
-
-.hero-text .greet {
-    font-size: 1em;
-    color: white;
-}
-
-.hero-text h1 {
-    font-size: 2em;
-    color: white;
-    margin-top: .25rem;
-    margin-bottom: .25rem;
-}
-
-.hero-text .accent {
-    color: #ff4141;
-}
-
-.hero-text h2 {
-    font-size: clamp(1.2rem, 3.5svw, 2rem);
-    color: white;
-    opacity: 0.9;
 }
 
 .hero-page > * {
@@ -120,7 +95,9 @@
     display: flex;
 }
 
-@media (max-width: 640px) or (max-width: 1000px) {
+
+
+@media only screen and (max-width:1000px) {
     .hero-roles {
         flex-direction: column;
         gap: .25rem;
@@ -135,7 +112,7 @@
     }
 }
 
-@media only screen and (orientation: portrait) and (max-width: 600px) {
+@media only screen and (orientation: portrait) and (max-width:640px) {
     .hero-top,
     .hero-center,
     .hero-bottom {
@@ -157,10 +134,6 @@
 
     .hero-text {
         order: 2;
-    }
-
-    .profile-pic {
-        order: 1;
     }
 
     .hero-text {

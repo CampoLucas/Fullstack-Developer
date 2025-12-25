@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full-Stack Portfolio</title>
     <link href="./assets/css/style.css" rel="stylesheet">
-    <link href="./assets/css/throbber.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body id="app" aria-busy="true">
@@ -28,15 +27,14 @@
             <div class="hero-center" id="hero-center">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1 id="hero-title" class="hero-title">I'm <span class="accent">Lucas Campo</span></h1>
+                        <h1 id="hero-title" class="header-title">I'm <span class="accent">Lucas Campo</span></h1>
                         
                         <ul id="hero-roles" class="hero-roles">
                             <li class="hero-role">Game Developer</li>
                             <li class="hero-role ceparator">|</li>
                             <li class="hero-role">Full-Stack Developer</li>
                         </ul>
-                        <!-- <h2 id="hero-title">Full-Stack Developer</h2> -->
-                        <div class="hero-contact">
+                        <div id="hero-btn-cnt" class="hero-contact">
                             <a href="#contact" class="cta-btn">Contact</a>
                         </div>
                     </div>
@@ -52,49 +50,49 @@
             </div>
         </section>
 
-        <section class="background content" style="display: flex; justify-content: center;">
-            <div class="showcase-viewport">
+        <section class="background content" style="display: flex; justify-content: center;"><div class="showcase-viewport">
 
             
-                <!-- About Me -->
-                <section class="section-viewport" id="contact">
-                    <h2 id="about-title" class="text title">About Me</h2>
-                    <ul class="about-me-container">
-                        <li id="about-desc" class="about-me-text">
-                            <p class="text description">Hey! I'm a gameplay programmer with over two years of experience. I focus on building solid and flexible architecture, with a strong interest in AI behaviors, gameplay systems, and complex mechanics.</p>
-                            <p class="text description">I've always been drawn to games that reward curiosity and skill, and I try to bring that same mindset into my work. For me, programming isn't just about making things function, it's about helping the player feel something through how the game responds.</p>
-                        </li>
-                        <!-- <li class="about-me-image">
-                            <img id="about-pic" src="./assets/images/about/profile-pic.jpeg" />
-                        </li> -->
-                    </ul>
-                    <div id="about-contacts" class="contact-info" style="padding-bottom: 2rem;">
-                        <a href="mailto:campolucas2001@gmail.com" class="contact-link">campolucas2001@gmail.com</a>
-                        <span class="contact-sep">•</span>
-                        <a href="tel:+541127403576" class="contact-link">+54 11 2740-3576</a>
-                    </div>
-
-                    <div id="about-buttons" class="social" style="justify-content: center;">
-                        <a class="icon linkedin social-link" href="https://www.linkedin.com/in/lucascampo3333/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"></a>
-                        <a class="icon github social-link" href="https://github.com/CampoLucas" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"></a>
-                        <a class="icon email social-link" href="mailto:campolucas2001@gmail.com" aria-label="Send email"></a>
-                        <a class="icon website social-link" href="https://campolucas.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Game developer portfolio"></a>                            
-                    </div>
-                </section>
-                
-                <div class="section-separator">
-                    <span class="section-separator__line"></span>
+            <!-- About Me -->
+            <section class="section-viewport" id="contact">
+                <h2 id="about-title" class="text title">About Me</h2>
+                <ul class="about-me-container">
+                    <li id="about-desc" class="about-me-text">
+                        <p class="text description">Hey! I'm a gameplay programmer with over two years of experience. I focus on building solid and flexible architecture, with a strong interest in AI behaviors, gameplay systems, and complex mechanics.</p>
+                        <p class="text description">I've always been drawn to games that reward curiosity and skill, and I try to bring that same mindset into my work. For me, programming isn't just about making things function, it's about helping the player feel something through how the game responds.</p>
+                    </li>
+                    <!-- <li class="about-me-image">
+                        <img id="about-pic" src="./assets/images/about/profile-pic.jpeg" />
+                    </li> -->
+                </ul>
+                <div id="about-contacts" class="contact-info" style="padding-bottom: 2rem;">
+                    <a href="mailto:campolucas2001@gmail.com" class="contact-link">campolucas2001@gmail.com</a>
+                    <span class="contact-sep">•</span>
+                    <a href="tel:+541127403576" class="contact-link">+54 11 2740-3576</a>
                 </div>
 
-                <!-- Experience -->
-                <section class="section-viewport" style="">
-                    <h2 class="text title section-title">Experience</h2>
+                <div id="about-buttons" class="social" style="justify-content: center;">
+                    <a class="icon linkedin social-link" href="https://www.linkedin.com/in/lucascampo3333/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"></a>
+                    <a class="icon github social-link" href="https://github.com/CampoLucas" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"></a>
+                    <a class="icon email social-link" href="mailto:campolucas2001@gmail.com" aria-label="Send email"></a>
+                    <a class="icon website social-link" href="https://campolucas.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Game developer portfolio"></a>                            
+                </div>
+            </section>
+            
+            <div class="section-separator">
+                <span class="section-separator__line"></span>
+            </div>
+
+            <!-- Experience -->
+            <section class="section-viewport">
+                <h2 id="experience-title" class="title">Experience</h2>
+                <div id="experiences-cnt">
                     <div class="section-exp">
                         <div class="section-exp-title">
-                            <h3 style="margin-bottom: 10px;">3Dar - Eggscape</h3>
-                            <h4 style="margin-top: 10px; color: rgba(240, 248, 255, 0.607);">May 2023 - Feb 2025</h4>
+                            <h3 class="exp-title">3Dar - Eggscape</h3>
+                            <h4 class="exp-sub-title">May 2023 - Feb 2025</h4>
                         </div>
-                        <ul class="section-exp-showcase">
+                        <ul>
                             <li class="carousel-container">
                                 <div class="carousel" data-carousel>
                                     <div class="carousel-viewport">
@@ -102,7 +100,7 @@
                                         <img src="./assets/img/experience/three-dar/eggscape-02.png" alt="">
                                         <img src="./assets/img/experience/three-dar/eggscape-03.png" alt="">
                                         <img src="./assets/img/experience/three-dar/eggscape-04.png" alt="">
-
+    
                                         <div class="carousel-arrows">
                                             <button class="left" data-prev arial-label="Previous">‹</button>
                                             <button class="right" data-next arial-label="Next">›</button>
@@ -117,8 +115,15 @@
                                             <button><img src="./assets/img/experience/three-dar/eggscape-03.png"></button>
                                             <button><img src="./assets/img/experience/three-dar/eggscape-04.png"></button>
                                         </div>
+                                        <div class="carousel-thumb-scroll">
+                                            <button class="left" data-prev aria-label="Scroll thumbnails left">‹</button>
+                                            <div class="carousel-thumb-scroll-track">
+                                                <div class="carousel-thumb-scroll-handle"></div>
+                                            </div>
+                                            <button class="right" data-next aria-label="Scroll thumbnails right">›</button>
+                                        </div>
                                     </div>
-
+    
                                     <!-- Mobile -->
                                     <div class="carousel-dots">
                                         <button data-index="0" class="active"></button>
@@ -138,7 +143,7 @@
                                     <li><strong>Bug Fixing & Optimization:</strong> Fixed gameplay bugs and improved performance.</li>
                                     <li><strong>Multiplayer & AR/VR Integration:</strong> Helped develop multiplayer and AR/VR features.</li>
                                 </ul>
-
+    
                                 <div class="social" style="">
                                     <a class="icon meta social-link" 
                                         href="https://www.meta.com/experiences/eggscape/8895235860528889/?srsltid=AfmBOoppVZw7WgkzJgnG3FH3D0DXFqSv7HuNa3Odx-XDng9FYDOT87Dm" 
@@ -149,35 +154,142 @@
                             </li>
                         </ul>
                     </div>
-                    
-                    
-                    </section>
 
-                <div class="section-separator">
-                    <span class="section-separator__line"></span>
                 </div>
+                
+                
+            </section>
 
-                <section class="section-viewport">
-                    <h2 class="projects-title">Projects</h2>
-
-                    <ul class="projects-list">
-                        <li class="project-card">
-                            <a href="https://campolucas.github.io/Greatest-Movies/" target="_blank">
-                                <span>Greatest Movies</span>
-                                <span class="arrow">→</span>
-                            </a>
-                        </li>
-                        <li class="project-card">
-                            <a href="https://campolucas.github.io/Vocab-Match/" target="_blank">
-                                <span>Vocab Match</span>
-                                <span class="arrow">→</span>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-
+            <div class="section-separator">
+                <span class="section-separator__line"></span>
             </div>
-        </section>
+
+            <section class="section-viewport">
+                <h2 class="title">Projects</h2>
+                
+                <div class="projects-carousel">
+                    <div class="title-grid">
+                        <div class="section-title"><span>Webpages</span></div>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-items">
+                            <div class="focus">
+                                <a class="website-capsule" href="https://campolucas.github.io/Greatest-Movies/" target="_blank">
+                                    <div class="capsule-img-cnt">
+                                        <!-- <img src="https://campolucas.github.io/Greatest-Movies/assets/img/favicon2.svg"/> -->
+                                    </div>
+                                    <div class="info-cnt">
+                                        <p>Greatest Movies</p>
+                                    </div>
+                                </a>
+                                <a class="website-capsule" href="https://campolucas.github.io/Vocab-Match/" target="_blank">
+                                    <div class="capsule-img-cnt">
+                                        <img src="https://campolucas.github.io/Vocab-Match/assets/img/favicon2.svg"/>
+                                    </div>
+                                    <div class="info-cnt">
+                                        <p>Vocab Match!</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-thumbs"></div>
+                        <div class="arrow left hidden"><div></div></div>
+                        <div class="arrow right hidden"><div></div></div>
+                    </div>
+                </div>
+                <div class="projects-carousel">
+                    <div class="title-grid">
+                        <div class="section-title"><span>Games</span></div>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-items">
+                            <div class="focus">
+                                <a class="game-capsule" href="https://luinbucket.itch.io/rushrift" target="_blank">
+                                    <div class="capsule-img-cnt">
+                                        <img class="capsule-img" src="./assets/img/projects/rushrift/banner2.jpeg" />
+                                        <img class="capsule-video" src="https://img.itch.zone/aW1hZ2UvMzU1ODU0MC8yMzkzMzU5OS5naWY=/original/8%2BZ02w.gif" />
+                                        <!-- <video class="capsule-video" loop="loop" preload="true" playsinline="true">
+                                            <source src="https://video.fastly.steamstatic.com/store_trailers/1623730/1468980435/a9fa32ad1a1c432d89b07ac9da9bee6de0bb0054/1765943351/microtrailer.webm?t=1765946111" type="video/webm">
+                                        </video> -->
+                                    </div>
+                                    <div class="info-cnt">
+                                        <div class="info-tags">
+                                            <div class="info-tag">Speedrunning</div>
+                                            <div class="info-tag">FPS</div>
+                                            <div class="info-tag">Unity</div>
+                                            <div class="info-tag">Singleplayer</div>
+                                            <div class="info-tag">Shooter</div>
+                                            <div class="info-tag">Fast-paced</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="game-capsule" href="https://luinbucket.itch.io/mystic-catacombs" target="_blank">
+                                    <div class="capsule-img-cnt">
+                                        <img class="capsule-img" src="./assets/img/projects/mysticcatacombs/banner2.jpeg" />
+                                        <img class="capsule-video" src="https://campolucas.github.io/images/MC/MC_Giff1_Med.gif" />
+                                        <!-- <video class="capsule-video" loop="loop" preload="none" playsinline="true">
+                                            <source src="https://video.fastly.steamstatic.com/store_trailers/1623730/1468980435/a9fa32ad1a1c432d89b07ac9da9bee6de0bb0054/1765943351/microtrailer.webm?t=1765946111" type="video/webm">
+                                        </video> -->
+                                    </div>
+                                    <div class="info-cnt">
+                                        <div class="info-tags">
+                                            <div class="info-tag">Unity</div>
+                                            <div class="info-tag">Top-down</div>
+                                            <div class="info-tag">Prototype</div>
+                                            <div class="info-tag">3D</div>
+                                            <div class="info-tag">Fantasy</div>
+                                            <div class="info-tag">Magic</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="game-capsule" href="https://luinbucket.itch.io/gunbandit" target="_blank">
+                                    <div class="capsule-img-cnt">
+                                        <img class="capsule-img" src="./assets/img/projects/gunbandit/banner2.png" />
+                                        <img class="capsule-video" src="https://img.itch.zone/aW1hZ2UvMTgwMzM5NS8yMzkzMTg3Mi5naWY=/original/MfEPRE.gif" />
+                                        <!-- <video class="capsule-video" loop="loop" preload="none" playsinline="true">
+                                            <source src="https://video.fastly.steamstatic.com/store_trailers/1623730/1468980435/a9fa32ad1a1c432d89b07ac9da9bee6de0bb0054/1765943351/microtrailer.webm?t=1765946111" type="video/webm">
+                                        </video> -->
+                                    </div>
+                                    <div class="info-cnt">
+                                        <div class="info-tags">
+                                            <div class="info-tag">Action</div>
+                                            <div class="info-tag">Shooter</div>
+                                            <div class="info-tag">Unity</div>
+                                            <div class="info-tag">Top-down</div>
+                                            <div class="info-tag">2D</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="game-capsule" href="https://luinbucket.itch.io/the3047" target="_blank">
+                                    <div class="capsule-img-cnt">
+                                        <img class="capsule-img" src="https://img.itch.zone/aW1nLzE2MjM0ODU1LmpwZw==/315x250%23c/idr4Ob.jpg" />
+                                        <img class="capsule-video" src="https://img.itch.zone/aW1hZ2UvMTU3NTc4MC8yMzk0MDAyMy5naWY=/original/pe9Aa2.gif" />
+                                        <!-- <video class="capsule-video" loop="loop" preload="none" playsinline="true">
+                                            <source src="https://video.fastly.steamstatic.com/store_trailers/1623730/1468980435/a9fa32ad1a1c432d89b07ac9da9bee6de0bb0054/1765943351/microtrailer.webm?t=1765946111" type="video/webm">
+                                        </video> -->
+                                    </div>
+                                    <div class="info-cnt">
+                                        <div class="info-tags">
+                                            <div class="info-tag">Bullet hell</div>
+                                            <div class="info-tag">Shoot em up</div>
+                                            <div class="info-tag">Unity</div>
+                                            <div class="info-tag">Space</div>
+                                            <div class="info-tag">3D</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                            </div>
+                        </div>
+                        <div class="carousel-thumbs"></div>
+                        <div class="arrow left hidden"><div></div></div>
+                        <div class="arrow right hidden"><div></div></div>
+                    </div>
+                </div>
+            </section>
+
+            
+        </section></div>
     </main>
 
     <footer class="site-footer">
@@ -196,6 +308,53 @@
             </div>
         </div>
     </footer>
+
+
+    <template id="game-experience">
+        <div class="section-exp">
+            <div class="section-exp-title">
+                <h3 id="exp-role"></h3>
+                <h4 id="exp-company"></h4>
+                <h5 id="exp-period"></h4>
+            </div>
+
+            <ul>
+                <li id="carousel-cnt"></li>
+                <li id="description-cnt"></li>
+            </ul>
+        </div>
+    </template>
+
+
+    <template id="game-carousel">
+        <div class="carousel" data-carousel>
+            <div class="carousel-viewport">
+                <!-- Images -->
+                <div class="carousel-img-cnt" img-cnt></div>
+                <div class="carousel-arrows">
+                    <button class="left" data-prev arial-label="Previous">‹</button>
+                    <button class="right" data-next arial-label="Next">›</button>
+                </div>
+            </div>
+            
+            <!-- Desktop -->
+            <div class="carousel-thumbs">
+                <!-- Thumnails -->
+                <div class="carousel-thumbs-track" thumb-cnt></div>
+                <div class="carousel-thumb-scroll">
+                    <button class="left" data-prev aria-label="Scroll thumbnails left">‹</button>
+                    <div class="carousel-thumb-scroll-track">
+                        <div class="carousel-thumb-scroll-handle"></div>
+                    </div>
+                    <button class="right" data-next aria-label="Scroll thumbnails right">›</button>
+                </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="carousel-dots" dot-cnt>
+            </div>
+        </div>
+    </template>
 
     <script src="./src/particles/particles.js"></script>
     <script type="module" src="./src/core/App.js"></script>

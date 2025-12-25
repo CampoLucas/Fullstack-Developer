@@ -34,7 +34,7 @@
 /* arrows */
 
 .carousel-arrows {
-    display: flex;
+    display: none;
     position: absolute;
     inset: 0;
     justify-content: space-between;
@@ -74,7 +74,7 @@
     font-size: 65%;
 }
 
-@media (max-width: 768px) {
+@media only screen and (orientation: portrait) and (max-width:600px) {
     .carousel-arrows {
         display: flex;
     }
@@ -109,14 +109,14 @@
 
 .carousel-thumbs-track {
     display: flex;
-    
+    gap: 8px;
     margin-top: 8px;
     width: 100%;
     
 }
 
 .carousel-thumbs-track button {
-    padding-inline: 3px;
+    padding: 0;
     border: none;
     background: none;
     flex-shrink: 0;
@@ -136,9 +136,10 @@
 }
 
 .carousel-thumbs-track {
+    transition: transform .25s ease;
 }
 
-@media (max-width: 768px) {
+@media only screen and (orientation: portrait) and (max-width:600px) {
     .carousel-thumbs {
         display: none;
     }
@@ -146,4 +147,43 @@
     .carousel-dots {
         display: flex;
     }
+}
+
+.carousel-thumb-scroll {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.carousel-thumb-scroll-track {
+    position: relative;
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.carousel-thumb-scroll-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    border-radius: inherit;
+    transition: transform 0.25s ease;
+    cursor: grab;
+}
+
+.carousel-thumb-scroll-handle:active {
+    cursor: grabbing;
+}
+
+.carousel-thumb-scroll button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
 }

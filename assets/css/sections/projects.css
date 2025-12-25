@@ -1,38 +1,4 @@
-/* background section */
 
-.background {
-    background: rgba(255, 255, 255, .03);
-    backdrop-filter: blur(4px);
-}
-
-.background.content {
-    padding: 10svh 10svw;
-    border-top: 1px solid rgba(255, 255, 255, .1); 
-}
-
-.inner {
-    max-width: 900x;
-    margin: 0 auto;
-    padding-bottom: 5rem;
-}
-
-/* typography */
-
-.text {
-    color: white;
-    margin-bottom: 2rem;
-    letter-spacing: 0.03em;
-}
-
-.text.title {
-    font-size: 2.4rem;
-    letter-spacing: 0.04em;
-    text-align: center;
-}
-
-.description {
-    font-size: 1.2rem;
-}
 
 /* about me */
 
@@ -44,6 +10,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 20px;
     
 }
 
@@ -156,13 +123,13 @@
     padding: 1.2rem 1.6rem;
     border-radius: 12px;
 
-    background: rgba(255,255,255,0.06);
+    background-color: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
 
-    transition: background 150ms ease, transform 150ms ease;
+    transition: background-color 150ms ease, transform 150ms ease;
 }
 
 .project-card a:hover {
@@ -181,7 +148,7 @@
 }
 
 /* Mobile adjustments */
-@media (max-width: 600px) {
+@media only screen and (orientation: portrait) and (max-width:640px) {
     .projects {
         padding: 8svh 6svw;
     }
@@ -195,3 +162,6 @@
         padding: 1rem 1.3rem;
     }
 }
+
+/* Games */
+
