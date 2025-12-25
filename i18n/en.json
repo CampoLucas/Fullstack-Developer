@@ -5,9 +5,12 @@
             { "text": "Lucas Campo", "style": "accent" }
         ],
         "roles": [ "Game Developer", "Full-Stack Developer" ],
-        "imgAlt": "Profile picture"
+        "imgAlt": "Profile picture",
+        "contactBtn": "Contact",
+        "contactBtnHover": "Go to contacts"
     },
     "about": {
+        "title": "About Me",
         "description": [
             "Hey! I'm a gameplay programmer with over two years of experience. I focus on building solid and flexible architecture, with a strong interest in AI behaviors, gameplay systems, and complex mechanics.",
             "I've always been drawn to games that reward curiosity and skill, and I try to bring that same mindset into my work. For me, programming isn't just about making things function, it's about helping the player feel something through how the game responds."
@@ -20,21 +23,39 @@
         "portfolioHover": "Previous portfolio"
     },
     "experience": {
+        "title": "Experience",
         "threeDar": {
             "company": "3Dar",
             "product": "Eggscape",
-            "period": [ "May 2023", "Feb 2025" ],
-            "role": "Gameplay Programmer",
-            "desc": [
-                "Worked on an AR/VR multiplayer platformer game, called Eggscape, that received the 'Lion in la Biennale di Venezia' in 2022"
-            ],
-            "contributions": [
-                { "title": "Enemy AI", "desc": "Implemented the enemies AI in the game, everything from specific behaviors like path finding to combat." },
-                { "title": "Player Mechanics", "desc": "Built and implemented parkour and combat systems." },
-                { "title": "Maintenance & Optimization", "desc": "Fixed gameplay bugs and improved performance." },
-                { "title": "Multiplayer & AR/VR Integration", "desc": "Multiplayer & AR/VR Integration" }
-            ],
-            "imgAlt": "Eggscape showcase image"
+            "period": "May 2023 - Feb 2025",
+            "role": "Game Developer",
+            "imgAlt": "Eggscape showcase image",
+            "blocks": [
+                    { 
+                        "type": "description", 
+                        "title": "Projects",
+                        "value": "AR/VR multiplayer platformer developed for Oculus, awarded the Lion at the Biennale di Venezia (2022)."
+                    },
+                    {
+                        "type": "list",
+                        "title": "Key Contributions",
+                        "items": [
+                            "Designed and implemented an enemy AI system using a finite state machine combined with behavior trees, supporting coordinated enemy interactions and multiple states such as idle, chase, and attack.",
+                            "Built core player mechanics including wall-climbing parkour and a combo-based combat system with input-driven attacks, mid-air moves, and chained abilities.",
+                            "Worked on an authoritative server multiplayer model, ensuring player interactions such as attacks, item pickup, and item throwing felt responsive and consistent despite network latency.",
+                            "Developed gameplay systems specifically for VR, working hands-on with Oculus headsets and integrating input and interaction using the XR Toolkit."
+                        ]
+                    },
+                    {
+                        "type": "horizontal-list",
+                        "title": "Tech & Context",
+                        "items": [
+                            "Unity, C#",
+                            "Authoritative multiplayer architecture",
+                            "Oculus VR, XR Toolkit"
+                        ]
+                    }
+                ]
         }
     },
     "projects": {

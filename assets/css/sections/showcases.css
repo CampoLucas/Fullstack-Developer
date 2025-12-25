@@ -1,5 +1,24 @@
+/* background section */
+
+.background {
+    background: rgba(255, 255, 255, .03);
+    backdrop-filter: blur(4px);
+}
+
+.background.content {
+    padding: 10svh 0;
+    border-top: 1px solid rgba(255, 255, 255, .1); 
+}
+
+.inner {
+    max-width: 900x;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
 .showcase-viewport {
-    width: 80%; 
+    width: 100%;
+    max-width: 1200px;
     display: flex; 
     justify-content: center; 
     flex-direction: column;

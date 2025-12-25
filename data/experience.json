@@ -1,34 +1,39 @@
 {
-    "experience": [
-        {
-            "baseId": "experience.threeDar",
-            "companyId": "company",
-            "productId": "product",
-            "periodId": "period",
-            "roleId": "role",
-            "descriptionId": "desc",
-            "contributionsId": "contributions",
-            "images": [ 
-                "./assets/img/three-dar/eggscape-01.png", 
-                "./assets/img/three-dar/eggscape-02.png",
-                "./assets/img/three-dar/eggscape-03.png",
-                "./assets/img/three-dar/eggscape-04.png" 
-            ],
-            "imgAltId": "imgAlt",
-            "links": [
-                {
-                    "id": "meta",
-                    "link": "https://www.meta.com/experiences/eggscape/8895235860528889/?srsltid=AfmBOoppVZw7WgkzJgnG3FH3D0DXFqSv7HuNa3Odx-XDng9FYDOT87Dm",
-                    "icon": "meta",
-                    "hoverTextId": "metaHover"
-                },
-                {
-                    "id": "website",
-                    "link": "https://www.eggscape.com/",
-                    "icon": "website",
-                    "hoverTextId": "metaHover"
-                }
-            ]
-        }
-    ]
+    "experience": {
+        "baseId": "experience",
+        "titleId": "title",
+        "experiences": [
+            {
+                "baseId": "threeDar",
+                "companyId": "company",
+                "productId": "product",
+                "periodId": "period", 
+                "roleId": "role",
+                "blocksId": "blocks",
+                "images": [ 
+                    "./assets/img/three-dar/eggscape-01.png", 
+                    "./assets/img/three-dar/eggscape-02.png",
+                    "./assets/img/three-dar/eggscape-03.png",
+                    "./assets/img/three-dar/eggscape-04.png" 
+                ],
+                "imgAltId": "imgAlt",
+                "links": [
+                    {
+                        "id": "meta",
+                        "link": "https://www.meta.com/experiences/eggscape/8895235860528889/?srsltid=AfmBOoppVZw7WgkzJgnG3FH3D0DXFqSv7HuNa3Odx-XDng9FYDOT87Dm",
+                        "icon": "meta",
+                        "hoverTextId": "metaHover"
+                    },
+                    {
+                        "id": "website",
+                        "link": "https://www.eggscape.com/",
+                        "icon": "website",
+                        "hoverTextId": "metaHover"
+                    }
+                ]
+            }
+        ]
+        
+    }
+    
 }

@@ -34,7 +34,7 @@
                             <li class="hero-role ceparator">|</li>
                             <li class="hero-role">Full-Stack Developer</li>
                         </ul>
-                        <div class="hero-contact">
+                        <div id="hero-btn-cnt" class="hero-contact">
                             <a href="#contact" class="cta-btn">Contact</a>
                         </div>
                     </div>
@@ -85,77 +85,80 @@
 
             <!-- Experience -->
             <section class="section-viewport">
-                <h2 class="title">Experience</h2>
-                <div class="section-exp">
-                    <div class="section-exp-title">
-                        <h3 style="margin-bottom: 10px;">3Dar - Eggscape</h3>
-                        <h4 style="margin-top: 10px; color: rgba(240, 248, 255, 0.607);">May 2023 - Feb 2025</h4>
-                    </div>
-                    <ul class="section-exp-showcase">
-                        <li class="carousel-container">
-                            <div class="carousel" data-carousel>
-                                <div class="carousel-viewport">
-                                    <img src="./assets/img/experience/three-dar/eggscape-01.png" alt="" class="active">
-                                    <img src="./assets/img/experience/three-dar/eggscape-02.png" alt="">
-                                    <img src="./assets/img/experience/three-dar/eggscape-03.png" alt="">
-                                    <img src="./assets/img/experience/three-dar/eggscape-04.png" alt="">
-
-                                    <div class="carousel-arrows">
-                                        <button class="left" data-prev arial-label="Previous">‹</button>
-                                        <button class="right" data-next arial-label="Next">›</button>
-                                    </div>
-                                </div>
-                                
-                                <!-- Desktop -->
-                                <div class="carousel-thumbs">
-                                    <div class="carousel-thumbs-track">
-                                        <button><img src="./assets/img/experience/three-dar/eggscape-01.png"></button>
-                                        <button><img src="./assets/img/experience/three-dar/eggscape-02.png"></button>
-                                        <button><img src="./assets/img/experience/three-dar/eggscape-03.png"></button>
-                                        <button><img src="./assets/img/experience/three-dar/eggscape-04.png"></button>
-                                    </div>
-                                    <div class="carousel-thumb-scroll">
-                                        <button class="left" data-prev aria-label="Scroll thumbnails left">‹</button>
-                                        <div class="carousel-thumb-scroll-track">
-                                            <div class="carousel-thumb-scroll-handle"></div>
+                <h2 id="experience-title" class="title">Experience</h2>
+                <div id="experiences-cnt">
+                    <div class="section-exp">
+                        <div class="section-exp-title">
+                            <h3 class="exp-title">3Dar - Eggscape</h3>
+                            <h4 class="exp-sub-title">May 2023 - Feb 2025</h4>
+                        </div>
+                        <ul class="section-exp-showcase">
+                            <li class="carousel-container">
+                                <div class="carousel" data-carousel>
+                                    <div class="carousel-viewport">
+                                        <img src="./assets/img/experience/three-dar/eggscape-01.png" alt="" class="active">
+                                        <img src="./assets/img/experience/three-dar/eggscape-02.png" alt="">
+                                        <img src="./assets/img/experience/three-dar/eggscape-03.png" alt="">
+                                        <img src="./assets/img/experience/three-dar/eggscape-04.png" alt="">
+    
+                                        <div class="carousel-arrows">
+                                            <button class="left" data-prev arial-label="Previous">‹</button>
+                                            <button class="right" data-next arial-label="Next">›</button>
                                         </div>
-                                        <button class="right" data-next aria-label="Scroll thumbnails right">›</button>
+                                    </div>
+                                    
+                                    <!-- Desktop -->
+                                    <div class="carousel-thumbs">
+                                        <div class="carousel-thumbs-track">
+                                            <button><img src="./assets/img/experience/three-dar/eggscape-01.png"></button>
+                                            <button><img src="./assets/img/experience/three-dar/eggscape-02.png"></button>
+                                            <button><img src="./assets/img/experience/three-dar/eggscape-03.png"></button>
+                                            <button><img src="./assets/img/experience/three-dar/eggscape-04.png"></button>
+                                        </div>
+                                        <div class="carousel-thumb-scroll">
+                                            <button class="left" data-prev aria-label="Scroll thumbnails left">‹</button>
+                                            <div class="carousel-thumb-scroll-track">
+                                                <div class="carousel-thumb-scroll-handle"></div>
+                                            </div>
+                                            <button class="right" data-next aria-label="Scroll thumbnails right">›</button>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Mobile -->
+                                    <div class="carousel-dots">
+                                        <button data-index="0" class="active"></button>
+                                        <button data-index="1"></button>
+                                        <button data-index="2"></button>
+                                        <button data-index="3"></button>
                                     </div>
                                 </div>
-
-                                <!-- Mobile -->
-                                <div class="carousel-dots">
-                                    <button data-index="0" class="active"></button>
-                                    <button data-index="1"></button>
-                                    <button data-index="2"></button>
-                                    <button data-index="3"></button>
+                            </li>
+                            <li class="description-container">
+                                <p><strong>Role:</strong> Game Programmer</p>
+                                <p><strong>Summary:</strong> An AR/VR multiplayer platformer that received the "Lion in la Biennale di Venezia" in 2022.</p>
+                                <p><strong>Contributions</strong></p>
+                                <ul style="padding-left: 1.5rem;">
+                                    <li><strong>Enemy AI System:</strong> Implemented enemy behaviors, including decision-making, movement, and combat.</li>
+                                    <li><strong>Player Mechanics:</strong> Built and implemented parkour and combat systems.</li>
+                                    <li><strong>Bug Fixing & Optimization:</strong> Fixed gameplay bugs and improved performance.</li>
+                                    <li><strong>Multiplayer & AR/VR Integration:</strong> Helped develop multiplayer and AR/VR features.</li>
+                                </ul>
+    
+                                <div class="social" style="">
+                                    <a class="icon meta social-link" 
+                                        href="https://www.meta.com/experiences/eggscape/8895235860528889/?srsltid=AfmBOoppVZw7WgkzJgnG3FH3D0DXFqSv7HuNa3Odx-XDng9FYDOT87Dm" 
+                                        target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                                    </a>
+                                    <a class="icon link-2 social-link" href="https://www.eggscape.com/" target="_blank" rel="noopener noreferrer" aria-label="Game developer portfolio"></a>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="description-container">
-                            <p><strong>Role:</strong> Game Programmer</p>
-                            <p><strong>Summary:</strong> An AR/VR multiplayer platformer that received the "Lion in la Biennale di Venezia" in 2022.</p>
-                            <p><strong>Contributions</strong></p>
-                            <ul style="padding-left: 1.5rem;">
-                                <li><strong>Enemy AI System:</strong> Implemented enemy behaviors, including decision-making, movement, and combat.</li>
-                                <li><strong>Player Mechanics:</strong> Built and implemented parkour and combat systems.</li>
-                                <li><strong>Bug Fixing & Optimization:</strong> Fixed gameplay bugs and improved performance.</li>
-                                <li><strong>Multiplayer & AR/VR Integration:</strong> Helped develop multiplayer and AR/VR features.</li>
-                            </ul>
+                            </li>
+                        </ul>
+                    </div>
 
-                            <div class="social" style="">
-                                <a class="icon meta social-link" 
-                                    href="https://www.meta.com/experiences/eggscape/8895235860528889/?srsltid=AfmBOoppVZw7WgkzJgnG3FH3D0DXFqSv7HuNa3Odx-XDng9FYDOT87Dm" 
-                                    target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-                                </a>
-                                <a class="icon link-2 social-link" href="https://www.eggscape.com/" target="_blank" rel="noopener noreferrer" aria-label="Game developer portfolio"></a>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
                 
                 
-                </section>
+            </section>
 
             <div class="section-separator">
                 <span class="section-separator__line"></span>
@@ -305,6 +308,11 @@
             </div>
         </div>
     </footer>
+
+
+    <template id="img-carousel">
+
+    </template>
 
     <script src="./src/particles/particles.js"></script>
     <script type="module" src="./src/core/App.js"></script>

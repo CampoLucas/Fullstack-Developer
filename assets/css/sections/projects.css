@@ -1,20 +1,4 @@
-/* background section */
 
-.background {
-    background: rgba(255, 255, 255, .03);
-    backdrop-filter: blur(4px);
-}
-
-.background.content {
-    padding: 10svh 10svw;
-    border-top: 1px solid rgba(255, 255, 255, .1); 
-}
-
-.inner {
-    max-width: 900x;
-    margin: 0 auto;
-    padding-bottom: 5rem;
-}
 
 /* about me */
 
