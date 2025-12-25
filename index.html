@@ -92,7 +92,7 @@
                             <h3 class="exp-title">3Dar - Eggscape</h3>
                             <h4 class="exp-sub-title">May 2023 - Feb 2025</h4>
                         </div>
-                        <ul class="section-exp-showcase">
+                        <ul>
                             <li class="carousel-container">
                                 <div class="carousel" data-carousel>
                                     <div class="carousel-viewport">
@@ -310,8 +310,50 @@
     </footer>
 
 
-    <template id="img-carousel">
+    <template id="game-experience">
+        <div class="section-exp">
+            <div class="section-exp-title">
+                <h3 id="exp-role"></h3>
+                <h4 id="exp-company"></h4>
+                <h5 id="exp-period"></h4>
+            </div>
 
+            <ul>
+                <li id="carousel-cnt"></li>
+                <li id="description-cnt"></li>
+            </ul>
+        </div>
+    </template>
+
+
+    <template id="game-carousel">
+        <div class="carousel" data-carousel>
+            <div class="carousel-viewport">
+                <!-- Images -->
+                <div class="carousel-img-cnt" img-cnt></div>
+                <div class="carousel-arrows">
+                    <button class="left" data-prev arial-label="Previous">‹</button>
+                    <button class="right" data-next arial-label="Next">›</button>
+                </div>
+            </div>
+            
+            <!-- Desktop -->
+            <div class="carousel-thumbs">
+                <!-- Thumnails -->
+                <div class="carousel-thumbs-track" thumb-cnt></div>
+                <div class="carousel-thumb-scroll">
+                    <button class="left" data-prev aria-label="Scroll thumbnails left">‹</button>
+                    <div class="carousel-thumb-scroll-track">
+                        <div class="carousel-thumb-scroll-handle"></div>
+                    </div>
+                    <button class="right" data-next aria-label="Scroll thumbnails right">›</button>
+                </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="carousel-dots" dot-cnt>
+            </div>
+        </div>
     </template>
 
     <script src="./src/particles/particles.js"></script>

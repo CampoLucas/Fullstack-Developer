@@ -1,6 +1,9 @@
+import { Carousel } from "./elements/Carousel.js";
+
 export class Renderer {
     constructor(app) {
         this.app = app;
+        this.carousels = [];
     }
 
     init() {
@@ -81,33 +84,41 @@ export class Renderer {
         experiencesEl.innerHTML = "";
         
         const experiences = experience.experiences;
+        const temp = document.getElementById("game-experience");
         for (let i = 0; i < experiences.length; i++) {
-            this.renderExperience(experiencesEl, experiences[i], this.t(baseId, experiences[i].baseId));
+            this.renderExperience(experiencesEl, temp, experiences[i], this.t(baseId, experiences[i].baseId));
         }
     }
 
-    renderExperience(container, experience, baseId) {
-        // create the section
-        const sectionEl = document.createElement("div");
-        sectionEl.classList.add("section-exp");
-        container.appendChild(sectionEl);
+    renderExperience(container, template, experience, baseId) {
+        // Clone template
+        const clone = template.content.firstElementChild.cloneNode(true);
+        container.appendChild(clone);
         
-        // add the title and subtitle
-        const titleCntEl = document.createElement("div");
-        const titleEl = document.createElement("h3");
-        const subTitle = document.createElement("h4");
-        const thirdTitle = document.createElement("h5");
-        
-        titleCntEl.classList.add("section-exp-title");
-
-        sectionEl.appendChild(titleCntEl);
-        titleCntEl.appendChild(titleEl);
-        titleCntEl.appendChild(subTitle);
-        titleCntEl.appendChild(thirdTitle);
-
+        // Set the title section
+        const titleEl = clone.querySelector("#exp-role");
         titleEl.textContent = `${baseId[experience.roleId]}`;
+        
+        const subTitle = clone.querySelector("#exp-company");
         subTitle.textContent = `${baseId[experience.companyId]} - ${baseId[experience.productId]}`;
+        
+        const thirdTitle = clone.querySelector("#exp-period");
         thirdTitle.textContent = `${baseId[experience.periodId]}`;
+
+        // Add the img carousel
+        const imgContainer = clone.querySelector("#carousel-cnt");
+        const carouselTemp = document.getElementById("game-carousel");
+        this.addImgCarousel(imgContainer, carouselTemp, experience.images, baseId[experience.productId]);
+    }
+
+    addImgCarousel(container, template, images, alt) {
+        container.innerHTML = "";
+        
+        // clone template
+        const clone = template.content.firstElementChild.cloneNode(true);
+        container.appendChild(clone);
+
+        this.carousels.push(new Carousel(clone, 5, 4000, images, alt));
     }
 
     // Helpers

@@ -1,10 +1,53 @@
 export class Carousel {
-    constructor(root, thumbsPerView = 4, autoInterval = null) {
+
+
+    constructor(root, thumbsPerView = 4, autoInterval = null, images = null, alt = null) {
         this.root = root;
 
-        this.images = Array.from(root.querySelectorAll('.carousel-viewport img'));
-        this.thumbButtons = Array.from(root.querySelectorAll('.carousel-thumbs-track button'));
-        this.dotButtons = Array.from(root.querySelectorAll('.carousel-dots button'));
+        if (!images) {
+            this.images = Array.from(root.querySelectorAll('.carousel-viewport img'));
+            this.thumbButtons = Array.from(root.querySelectorAll('.carousel-thumbs-track button'));
+            this.dotButtons = Array.from(root.querySelectorAll('.carousel-dots button'));
+        }
+        else {
+            this.images = [];
+            this.thumbButtons = [];
+            this.dotButtons = [];
+
+            // set images, thumbs and buttons
+            const imgCntEl = root.querySelector("[img-cnt]");
+            const thumbCntEl = root.querySelector("[thumb-cnt]");
+            const dotCntEl = root.querySelector("[dot-cnt]");
+
+            for (let i = 0; i < images.length; i++) {
+                const img = images[i];        
+                
+                // preview img
+                const previewEl = document.createElement("img");
+                previewEl.src = img;
+                previewEl.alt = `${alt} preview ${i + 1}`;
+                imgCntEl.appendChild(previewEl);
+
+                this.images.push(previewEl);
+
+                // thumbnail
+                const thumbEl = document.createElement("img");
+                const thumbBtnEl = document.createElement("button");
+                thumbBtnEl.appendChild(thumbEl);
+                thumbEl.src = img;
+                thumbEl.alt = `${alt} thumbnail ${i + 1}`;
+                thumbCntEl.appendChild(thumbBtnEl);
+
+                this.thumbButtons.push(thumbBtnEl);
+
+                // dot
+                const dotEl = document.createElement("button");
+                dotEl.setAttribute("data-index", `${i}`);
+                dotCntEl.appendChild(dotEl);
+
+                this.dotButtons.push(dotEl);
+            }
+        }
 
         this.track = root.querySelector('.carousel-thumbs-track');
 

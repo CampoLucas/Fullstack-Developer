@@ -49,9 +49,9 @@ export class App {
         }
 
         this.renderer.init();
-        document.querySelectorAll('[data-carousel]').forEach(el => {
-            new Carousel(el, 5, 4000);
-        });
+        // document.querySelectorAll('[data-carousel]').forEach(el => {
+        //     new Carousel(el, 5, 4000);
+        // });
 
         this.endLoad();
     }

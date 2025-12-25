@@ -11,10 +11,10 @@
                 "roleId": "role",
                 "blocksId": "blocks",
                 "images": [ 
-                    "./assets/img/three-dar/eggscape-01.png", 
-                    "./assets/img/three-dar/eggscape-02.png",
-                    "./assets/img/three-dar/eggscape-03.png",
-                    "./assets/img/three-dar/eggscape-04.png" 
+                    "./assets/img/experience/three-dar/eggscape-01.png", 
+                    "./assets/img/experience/three-dar/eggscape-02.png",
+                    "./assets/img/experience/three-dar/eggscape-03.png",
+                    "./assets/img/experience/three-dar/eggscape-04.png" 
                 ],
                 "imgAltId": "imgAlt",
                 "links": [
