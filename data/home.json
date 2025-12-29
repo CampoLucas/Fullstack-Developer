@@ -3,7 +3,7 @@
         "baseId": "hero",
         "titleId": "title",
         "rolesId": "roles",
-        "picture": { "img": "https://media.gq.com.mx/photos/63dfdcc493c9fe36c9a8ebe7/1:1/w_2000,h_2000,c_limit/adam-sandler-looks-para-un-estilo-informal-y-exitoso.jpg", "altId": "imgAlt" },
+        "picture": { "img": "../assets/img/profile/hero-pic.jpg", "altId": "imgAlt" },
         "buttons": [
             { 
                 "id": "contacts",
