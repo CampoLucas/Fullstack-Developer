@@ -73,7 +73,7 @@ export class Renderer {
     renderExperiences() {
         const experience = this.app.experience.experience;
         const baseId = experience.baseId;
-        console.log();
+        
 
         // Title
         const titleEl = document.getElementById("experience-title");
@@ -90,30 +90,74 @@ export class Renderer {
         }
     }
 
-    renderExperience(container, template, experience, baseId) {
+    renderExperience(container, template, block, baseId) {
         // Clone template
         const clone = template.content.firstElementChild.cloneNode(true);
         container.appendChild(clone);
         
         // Set the title section
         const titleEl = clone.querySelector("#exp-role");
-        titleEl.textContent = `${baseId[experience.roleId]}`;
+        titleEl.textContent = `${baseId[block.roleId]}`;
         
         const subTitle = clone.querySelector("#exp-company");
-        subTitle.textContent = `${baseId[experience.companyId]} - ${baseId[experience.productId]}`;
+        subTitle.textContent = `${baseId[block.companyId]} - ${baseId[block.productId]}`;
         
         const thirdTitle = clone.querySelector("#exp-period");
-        thirdTitle.textContent = `${baseId[experience.periodId]}`;
+        thirdTitle.textContent = `${baseId[block.periodId]}`;
 
         // Add the img carousel
         const imgCnt = clone.querySelector("#carousel-cnt");
         const carouselTemp = document.getElementById("game-carousel");
-        this.addImgCarousel(imgCnt, carouselTemp, experience.images, baseId[experience.productId]);
+        this.addImgCarousel(imgCnt, carouselTemp, block.images, baseId[block.productId]);
 
         // Add the experience description
         const descCnt = clone.querySelector("#description-cnt");
-        this.renderCustomText(descCnt, baseId[experience.blocksId]);
+        this.renderCustomText(descCnt, baseId[block.blocksId]);
 
+        // Buttons
+        const btnCnt = clone.querySelector("#links-btn-cnt");
+        this.renderContactButtons(btnCnt, block.buttons, baseId);
+
+    }
+
+    renderProject(container, template, block, baseId) {
+        // Set background
+        const img = document.getElementById("bg-popup");
+        const media = block.media;
+        const hasMedia = media;
+        if (hasMedia && media.background) {
+            img.src = media.background;
+        } 
+        else {
+            img.classList.add("disabled");
+        }
+        
+        const clone = template.content.firstElementChild.cloneNode(true);
+        container.appendChild(clone);
+
+        // Set the title section
+        const titleEl = clone.querySelector("#project-title");
+        titleEl.textContent = `${baseId[block.titleId]}`;
+
+        const thirdTitle = clone.querySelector("#project-period");
+        thirdTitle.textContent = `${baseId[block.periodId]}`;
+
+        // Add the img carousel
+        if (hasMedia && media.carouselImages) {
+            const imgCnt = clone.querySelector("#carousel-cnt");
+            const carouselTemp = document.getElementById("game-carousel");
+            this.addImgCarousel(imgCnt, carouselTemp, media.carouselImages, baseId[block.titleId]);
+        }
+    
+        // Add project description
+        const descCnt = clone.querySelector("#description-cnt");
+        this.renderCustomText(descCnt, baseId[block.blocksId]);
+
+        // Buttons
+        if (block.buttons) {
+            const btnCnt = clone.querySelector("#links-btn-cnt");
+            this.renderContactButtons(btnCnt, block.buttons, baseId);
+        }
     }
 
     addImgCarousel(container, template, images, alt) {
@@ -174,14 +218,13 @@ export class Renderer {
         if (!blocks) return;
 
         const length = blocks.length;
-        console.log(length)
+        
         for (let i = 0; i < length; i++) {
             const block = blocks[i];
             if (!block) {
                 console.log(`WARNING: [renderCustomText] Block from the index ${i} is null.`)
                 continue;
             }
-            console.log(block.type)
             switch (block.type) {
                 case "desc":
                     container.appendChild(this.getDescEl(block));
