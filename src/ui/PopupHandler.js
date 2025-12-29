@@ -59,32 +59,12 @@ export class PopupHandler {
         render.renderProject(cnt, temp, project, render.t(baseId, project.baseId));
         const closeBtn = popup.querySelector("#close-popup-btn");
         closeBtn.onclick = () => {
-            history.pushState("", document.title, window.location.pathname);
             this.removePopup();
         }
-
-
-        // const popup = document.createElement("div");
-        // popup.className = "popup";
-
-        // popup.innerHTML = `
-        //     <div class="popup-content">
-        //     <h2>Popup: ${project.id}</h2>
-        //     <p>This only exists when the hash exists.</p>
-        //     <button id="close">Close</button>
-        //     </div>
-        // `;
-
-        // popup.querySelector("#close").onclick = () => {
-        //     history.pushState("", document.title, window.location.pathname);
-        //     this.removePopup();
-        // };
-
-        // document.body.appendChild(popup);
     }
 
     removePopup() {
-        //document.body.style.overflow = "";
+        history.pushState("", document.title, window.location.pathname);
         document.body.classList.remove("popup-open");
         document.querySelector(".popup")?.remove();
     }
