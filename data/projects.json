@@ -11,9 +11,9 @@
                 "roleId": "roles",
                 "blocksId": "blocks",
                 "media": {
-                    "banner": "../assets/img/projects/rushrift/banner.jpeg",
-                    "background": "../assets/img/projects/rushrift/banner2.jpeg",
-                    "capsuleImg": "../assets/img/projects/rushrift/banner2.jpeg",
+                    "banner": "./assets/img/projects/rushrift/banner.jpeg",
+                    "background": "./assets/img/projects/rushrift/banner2.jpeg",
+                    "capsuleImg": "./assets/img/projects/rushrift/banner2.jpeg",
                     "capsuleVideo": "https://img.itch.zone/aW1hZ2UvMzU1ODU0MC8yMzkzMzU5OS5naWY=/original/8%2BZ02w.gif",
                     "carouselImages": [
                         "https://campolucas.github.io/images/RushRift/Gif1_HighRes.gif",
@@ -52,9 +52,9 @@
                 "roleId": "roles",
                 "blocksId": "blocks",
                 "media": {
-                    "banner": "../assets/img/projects/mysticcatacombs/banner.jpeg",
-                    "background": "../assets/img/projects/mysticcatacombs/banner2.jpeg",
-                    "capsuleImg": "../assets/img/projects/mysticcatacombs/banner2.jpeg",
+                    "banner": "./assets/img/projects/mysticcatacombs/banner.jpeg",
+                    "background": "./assets/img/projects/mysticcatacombs/banner2.jpeg",
+                    "capsuleImg": "./assets/img/projects/mysticcatacombs/banner2.jpeg",
                     "capsuleVideo": "https://campolucas.github.io/images/MC/MC_Giff1_Med.gif",
                     "carouselImages": [
                         "https://campolucas.github.io/images/MC/MC_Giff1_High.gif",
