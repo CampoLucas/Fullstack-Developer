@@ -1,7 +1,6 @@
 import { JSONLoader } from "./JSONLoader.js";
-import { Carousel } from "../ui/elements/Carousel.js";
 import { Renderer } from "../ui/Renderer.js";
-import { PopupHandler } from "../ui/PopUpHandler.js";
+import { PopupHandler } from "../ui/PopupHandler.js";
 
 const dataPath = "./data";
 const langPath = "./i18n";
