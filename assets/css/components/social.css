@@ -87,18 +87,18 @@
         font-size: .7rem;
     }
 
-    .profile-pic {
+    .profile-shadow {
         --profile-pic-size: clamp(15svw, 25svw, 50svw);
         height: auto;
     }
 
-    .profile-pic {
+    .profile-shadow {
         order: 1;
     }
 }
 
 @media only screen and (orientation: portrait) and (max-width: 450px) {
-    .profile-pic {
+    .profile-shadow {
         --profile-pic-size: 60svw;
     }
 }
