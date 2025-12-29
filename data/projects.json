@@ -1,94 +1,87 @@
 {
-    "projects": [
-        {
-            "id": "vocabmatch",
-            "baseId": "projects.vocabMatch",
-            "titleId": "title",
-            "category": "websites",
-            "shortDescriptionId": "shortDesc",
-            "descriptionId": "desc",
-            "rolesId": "roles",
-            "thumbnails": [
-                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
-                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
-            ],
-            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
-            "imgAltId": "imgAlt"
-        },
-        {
-            "id": "greatestmovies",
-            "baseId": "projects.greatestMovies",
-            "titleId": "title",
-            "category": "websites",
-            "shortDescriptionId": "shortDesc",
-            "descriptionId": "desc",
-            "rolesId": "roles",
-            "thumbnails": [
-                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
-                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
-            ],
-            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
-            "imgAltId": "imgAlt"
-        },
-        {
-            "id": "rushrift",
-            "baseId": "projects.rushRift",
-            "titleId": "title",
-            "category": "games",
-            "shortDescriptionId": "shortDesc",
-            "descriptionId": "desc",
-            "rolesId": "roles",
-            "thumbnails": [
-                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
-                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
-            ],
-            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
-            "imgAltId": "imgAlt"
-        },
-        {
-            "id": "mysticcatacombs",
-            "baseId": "projects.mysticCatacombs",
-            "titleId": "title",
-            "category": "games",
-            "shortDescriptionId": "shortDesc",
-            "descriptionId": "desc",
-            "rolesId": "roles",
-            "thumbnails": [
-                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
-                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
-            ],
-            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
-            "imgAltId": "imgAlt"
-        },
-        {
-            "id": "gunbandit",
-            "baseId": "projects.gunBandit",
-            "titleId": "title",
-            "category": "games",
-            "shortDescriptionId": "shortDesc",
-            "descriptionId": "desc",
-            "rolesId": "roles",
-            "thumbnails": [
-                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
-                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
-            ],
-            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
-            "imgAltId": "imgAlt"
-        },
-        {
-            "id": "shipgame",
-            "baseId": "projects.shipGame",
-            "titleId": "title",
-            "category": "games",
-            "shortDescriptionId": "shortDesc",
-            "descriptionId": "desc",
-            "rolesId": "roles",
-            "thumbnails": [
-                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
-                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
-            ],
-            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
-            "imgAltId": "imgAlt"
-        }
-    ]
+    "projects": {
+        "baseId": "projects",
+        "titleId": "title",
+        "projects": [
+            {
+                "baseId": "rushRift",
+                "titleId": "title",
+                "category": "games",
+                "periodId": "period",
+                "roleId": "roles",
+                "blocksId": "blocks",
+                "media": {
+                    "banner": "../assets/img/projects/rushrift/banner.jpeg",
+                    "background": "../assets/img/projects/rushrift/banner2.jpeg",
+                    "capsuleImg": "../assets/img/projects/rushrift/banner2.jpeg",
+                    "capsuleVideo": "https://img.itch.zone/aW1hZ2UvMzU1ODU0MC8yMzkzMzU5OS5naWY=/original/8%2BZ02w.gif",
+                    "carouselImages": [
+                        "https://campolucas.github.io/images/RushRift/Gif1_HighRes.gif",
+                        "https://campolucas.github.io/images/RushRift/Gif2_HighRes.gif",
+                        "https://campolucas.github.io/images/RushRift/Gif3_HighRes.gif",
+                        "https://campolucas.github.io/images/RushRift/Gif4_HighRes.gif",
+                        "https://campolucas.github.io/images/RushRift/Gif5_HighRes.gif",
+                        "https://campolucas.github.io/images/RushRift/Gif6_HighRes.gif"
+                    ]
+                },
+                "imgAltId": "imgAlt",
+                "buttons": [
+                    { 
+                        "id": "itch",
+                        "link": "https://luinbucket.itch.io/rushrift", 
+                        "classList": [ "icon", "social-link", "itch" ],
+                        "hoverTextId": "itchHover",
+                        "type": "link",
+                        "newTab": true
+                    },
+                    { 
+                        "id": "github",
+                        "link": "https://github.com/CampoLucas/RushRift", 
+                        "classList": [ "icon", "social-link", "github" ],
+                        "hoverTextId": "itchHover",
+                        "type": "link",
+                        "newTab": true
+                    }
+                ]
+            },
+            {
+                "baseId": "mysticCatacombs",
+                "titleId": "title",
+                "category": "games",
+                "periodId": "period",
+                "roleId": "roles",
+                "blocksId": "blocks",
+                "media": {
+                    "banner": "../assets/img/projects/mysticcatacombs/banner.jpeg",
+                    "background": "../assets/img/projects/mysticcatacombs/banner2.jpeg",
+                    "capsuleImg": "../assets/img/projects/mysticcatacombs/banner2.jpeg",
+                    "capsuleVideo": "https://campolucas.github.io/images/MC/MC_Giff1_Med.gif",
+                    "carouselImages": [
+                        "https://campolucas.github.io/images/MC/MC_Giff1_High.gif",
+                        "https://campolucas.github.io/images/MC/MC_Giff2_High.gif",
+                        "https://campolucas.github.io/images/mysticcatacombs.jpg"
+                    ]
+                },
+                "imgAltId": "imgAlt",
+                "buttons": [
+                    { 
+                        "id": "itch",
+                        "link": "https://luinbucket.itch.io/mystic-catacombs", 
+                        "classList": [ "icon", "social-link", "itch" ],
+                        "hoverTextId": "itchHover",
+                        "type": "link",
+                        "newTab": true
+                    },
+                    { 
+                        "id": "github",
+                        "link": "https://github.com/CampoLucas/MysticCatacombs", 
+                        "classList": [ "icon", "social-link", "github" ],
+                        "hoverTextId": "itchHover",
+                        "type": "link",
+                        "newTab": true
+                    }
+                ]
+            }
+        ]
+    }
 }

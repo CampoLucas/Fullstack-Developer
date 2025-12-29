@@ -4,7 +4,7 @@
             { "text": "I'm ", "style": "normal" },
             { "text": "Lucas Campo", "style": "accent" }
         ],
-        "roles": [ "Game Developer", "Full-Stack Developer" ],
+        "roles": [ "Game Developer", "Web Developer" ],
         "imgAlt": "Profile picture",
         "contactBtn": "Contact",
         "contactBtnHover": "Go to contacts"
@@ -63,10 +63,61 @@
     "projects": {
         "rushRift": {
             "title": "Rush Rift",
-            "shortDesc": "A fast-paced first-person action game centered on momentum and precision.",
-            "desc": [
-                "As Lead Programmer, I developed the core movement, dash, and attack systems, as well as the additive level-loading architecture, focusing on scalability, performance, and clean modular code in Unity."
-            ],
+            "period": "Mar 2025 - Present",
+            "blocks": [
+                    { 
+                        "type": "desc", 
+                        "title": "About the Game",
+                        "text": "A fast-paced first-person action game centered on momentum and precision."
+                    },
+                    { 
+                        "type": "desc", 
+                        "title": "My Role",
+                        "text": "As Lead Programmer, I developed the core movement, dash, and attack systems, as well as the additive level-loading architecture, focusing on scalability, performance, and clean modular code in Unity."
+                    },
+                    {
+                        "type": "hr-ul",
+                        "title": "Tech & Context",
+                        "items": [
+                            "Unity", 
+                            "C#",
+                            "FPS",
+                            "Speedrunning", 
+                            "Shooter",
+                            "Fast-paced"
+                        ]
+                    }
+                ],
+            "roles": [ "Lead Programmer" ],
+            "imgAlt": "Rush Rift showcase"
+        },
+        "mysticCatacombs": {
+            "title": "Mystic Catacombs",
+            "period": "Apr 2025 - May 2025",
+            "blocks": [
+                    { 
+                        "type": "desc", 
+                        "title": "About the Game",
+                        "text": "A personal project focused on AI development and combat mechanics, created to experiment with system design and gameplay feel."
+                    },
+                    { 
+                        "type": "desc", 
+                        "title": "My Role",
+                        "text": "Developed independently from start to finish to strengthen my technical and design skills in Unity."
+                    },
+                    {
+                        "type": "hr-ul",
+                        "title": "Tech & Context",
+                        "items": [
+                            "Unity", 
+                            "C#",
+                            "3D",
+                            "Top-down", 
+                            "Fantasy",
+                            "Magic"
+                        ]
+                    }
+                ],
             "roles": [ "Lead Programmer" ],
             "imgAlt": "Rush Rift showcase"
         },

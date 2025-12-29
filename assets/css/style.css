@@ -25,3 +25,7 @@
 /* Effects */
 @import url("./effects/particles.css");
 @import url("./effects/gradient.css");
+
+.disabled {
+    display: none;
+}

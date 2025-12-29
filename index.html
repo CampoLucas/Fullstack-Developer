@@ -323,6 +323,9 @@
                 <li id="carousel-cnt" class="carousel-cnt"></li>
                 <li id="description-cnt"></li>
             </ul>
+
+            <div id="links-btn-cnt" class="social" style="justify-content: center;">
+            </div>
         </div>
     </template>
 
@@ -360,17 +363,49 @@
     <!-- Popup -->
     <template id="popup-template">
         <div class="popup">
-            <div class="background content"> 
-                <img class="img-bg" src="./assets/img/projects/rushrift/banner.jpeg" />
+            <div class="popup-panel background content"> 
+                <div class="bg-cnt">
+                    <div class="bg-color"></div>
+                    <!-- <div class="bg-image"></div> -->
+                    <img id="bg-popup" class="bg-image" src="./assets/img/projects/rushrift/banner.jpeg"/>
+                    <div class="bg-overlay"></div>
+                    <div class="bg-gradient"></div>
+
+                    <!-- <img class="bg-img" src="./assets/img/projects/rushrift/banner.jpeg" /> -->
+                </div>
+
                 
-                <div class="showcase-viewport">
-                    <div class="section-viewport">
+                <div class="showcase-viewport bg-content">
+                    <div id="popup-viewport" class="section-viewport">
                         <!-- ToDo: use the game-experience template here, reuse all the methods -->
-                        <h1>Rush Rift</h1>
                     </div>
                 </div>
             </div>
 
+        </div>
+    </template>
+
+    <template id="game-project">
+        <div class="section-exp">
+            <div style="display: flex; justify-content: space-between;">
+                <div class="section-exp-title">
+                    <h3 id="project-title" style="font-size: 30px;"></h3>
+                    <h4 id="project-period"></h4>
+                </div>
+                <button id="close-popup-btn" class="close-popup">X</button>
+
+            </div>
+
+            <div style="background-color: rgba(0, 0, 0, .2); padding: 12px;">
+
+                <ul style="margin-top: 0;">
+                    <li id="carousel-cnt" class="carousel-cnt"></li>
+                    <li id="description-cnt"></li>
+                </ul>
+    
+                <div id="links-btn-cnt" class="social" style="justify-content: center;">
+            </div>
+            </div>
         </div>
     </template>
     
