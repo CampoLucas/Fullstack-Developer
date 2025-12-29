@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full-Stack Portfolio</title>
     <link href="./assets/css/style.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body id="app" aria-busy="true">
     <div class="loaderWrap" role="status" aria-live="polite" aria-label="Loading">
@@ -50,7 +49,7 @@
             </div>
         </section>
 
-        <section class="background content" style="display: flex; justify-content: center;"><div class="showcase-viewport">
+        <section class="background content"><div class="showcase-viewport">
 
             
             <!-- About Me -->
@@ -174,7 +173,7 @@
                     <div class="carousel-container">
                         <div class="carousel-items">
                             <div class="focus">
-                                <a class="website-capsule" href="https://campolucas.github.io/Greatest-Movies/" target="_blank">
+                                <a class="website-capsule" href="#greatestMovies">
                                     <div class="capsule-img-cnt">
                                         <!-- <img src="https://campolucas.github.io/Greatest-Movies/assets/img/favicon2.svg"/> -->
                                     </div>
@@ -182,7 +181,7 @@
                                         <p>Greatest Movies</p>
                                     </div>
                                 </a>
-                                <a class="website-capsule" href="https://campolucas.github.io/Vocab-Match/" target="_blank">
+                                <a class="website-capsule" href="#vocabMatch">
                                     <div class="capsule-img-cnt">
                                         <img src="https://campolucas.github.io/Vocab-Match/assets/img/favicon2.svg"/>
                                     </div>
@@ -204,7 +203,7 @@
                     <div class="carousel-container">
                         <div class="carousel-items">
                             <div class="focus">
-                                <a class="game-capsule" href="https://luinbucket.itch.io/rushrift" target="_blank">
+                                <a class="game-capsule" href="#rushRift">
                                     <div class="capsule-img-cnt">
                                         <img class="capsule-img" src="./assets/img/projects/rushrift/banner2.jpeg" />
                                         <img class="capsule-video" src="https://img.itch.zone/aW1hZ2UvMzU1ODU0MC8yMzkzMzU5OS5naWY=/original/8%2BZ02w.gif" />
@@ -223,7 +222,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="game-capsule" href="https://luinbucket.itch.io/mystic-catacombs" target="_blank">
+                                <a class="game-capsule" href="#mysticCatacombs">
                                     <div class="capsule-img-cnt">
                                         <img class="capsule-img" src="./assets/img/projects/mysticcatacombs/banner2.jpeg" />
                                         <img class="capsule-video" src="https://campolucas.github.io/images/MC/MC_Giff1_Med.gif" />
@@ -242,7 +241,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="game-capsule" href="https://luinbucket.itch.io/gunbandit" target="_blank">
+                                <a class="game-capsule" href="#gunBandit">
                                     <div class="capsule-img-cnt">
                                         <img class="capsule-img" src="./assets/img/projects/gunbandit/banner2.png" />
                                         <img class="capsule-video" src="https://img.itch.zone/aW1hZ2UvMTgwMzM5NS8yMzkzMTg3Mi5naWY=/original/MfEPRE.gif" />
@@ -260,7 +259,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="game-capsule" href="https://luinbucket.itch.io/the3047" target="_blank">
+                                <a class="game-capsule" href="#shipGame">
                                     <div class="capsule-img-cnt">
                                         <img class="capsule-img" src="https://img.itch.zone/aW1nLzE2MjM0ODU1LmpwZw==/315x250%23c/idr4Ob.jpg" />
                                         <img class="capsule-video" src="https://img.itch.zone/aW1hZ2UvMTU3NTc4MC8yMzk0MDAyMy5naWY=/original/pe9Aa2.gif" />
@@ -308,6 +307,8 @@
     </footer>
 
 
+    <!-- Templates -->
+    <!-- Experience element for games -->
     <template id="game-experience">
         <div class="section-exp">
             <div class="section-exp-title">
@@ -323,7 +324,7 @@
         </div>
     </template>
 
-
+    <!-- Carousel -->
     <template id="game-carousel">
         <div class="carousel" data-carousel>
             <div class="carousel-viewport">
@@ -354,8 +355,28 @@
         </div>
     </template>
 
+    <!-- Popup -->
+    <template id="popup-template">
+        <div class="popup">
+            <div class="background content"> 
+                <img class="img-bg" src="./assets/img/projects/rushrift/banner.jpeg" />
+                
+                <div class="showcase-viewport">
+                    <div class="section-viewport">
+                        <!-- ToDo: use the game-experience template here, reuse all the methods -->
+                        <h1>Rush Rift</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </template>
+    
+
+
     <script src="./src/particles/particles.js"></script>
     <script type="module" src="./src/core/App.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,37 @@
 {
     "projects": [
         {
+            "id": "vocabmatch",
+            "baseId": "projects.vocabMatch",
+            "titleId": "title",
+            "category": "websites",
+            "shortDescriptionId": "shortDesc",
+            "descriptionId": "desc",
+            "rolesId": "roles",
+            "thumbnails": [
+                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
+                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
+            ],
+            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
+            "imgAltId": "imgAlt"
+        },
+        {
+            "id": "greatestmovies",
+            "baseId": "projects.greatestMovies",
+            "titleId": "title",
+            "category": "websites",
+            "shortDescriptionId": "shortDesc",
+            "descriptionId": "desc",
+            "rolesId": "roles",
+            "thumbnails": [
+                { "static": "static01.jpeg", "dinamic": "dinamic01.gif" },
+                { "static": "static02.jpeg", "dinamic": "dinamic02.gif" }
+            ],
+            "images": [ "showcase01.gif", "showcase02.gif", "showcase03.jpeg", "showcase04.jpeg"],
+            "imgAltId": "imgAlt"
+        },
+        {
+            "id": "rushrift",
             "baseId": "projects.rushRift",
             "titleId": "title",
             "category": "games",
@@ -15,9 +46,10 @@
             "imgAltId": "imgAlt"
         },
         {
-            "baseId": "projects.langGame",
+            "id": "mysticcatacombs",
+            "baseId": "projects.mysticCatacombs",
             "titleId": "title",
-            "category": "websites",
+            "category": "games",
             "shortDescriptionId": "shortDesc",
             "descriptionId": "desc",
             "rolesId": "roles",
@@ -29,6 +61,7 @@
             "imgAltId": "imgAlt"
         },
         {
+            "id": "gunbandit",
             "baseId": "projects.gunBandit",
             "titleId": "title",
             "category": "games",
@@ -43,6 +76,7 @@
             "imgAltId": "imgAlt"
         },
         {
+            "id": "shipgame",
             "baseId": "projects.shipGame",
             "titleId": "title",
             "category": "games",

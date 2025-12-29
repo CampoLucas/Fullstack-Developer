@@ -10,7 +10,6 @@ export class JSONLoader {
     async load(path) {
         // return cached
         if (this.cache.has(path)) {
-            console.log(`has cache for ${path}`);
             return this.cache.get(path);
         }
 

@@ -1,6 +1,7 @@
 import { JSONLoader } from "./JSONLoader.js";
 import { Carousel } from "../ui/elements/Carousel.js";
 import { Renderer } from "../ui/Renderer.js";
+import { PopupHandler } from "../ui/PopUpHandler.js";
 
 const dataPath = "./data";
 const langPath = "./i18n";
@@ -9,6 +10,7 @@ const defaultLang = "en";
 
 export class App {
     constructor() {
+        this.popup = new PopupHandler(this);
         this.json = new JSONLoader();
         this.renderer = new Renderer(this);
 
@@ -16,9 +18,11 @@ export class App {
         this.experience = [];
         this.projects = [];
         this.skills = [];
-
+        
         this.lang = null;
         this.defaultLang = null;
+        
+        this.ready = this.init();
     }
 
     async init() {
@@ -48,6 +52,7 @@ export class App {
             this.defaultLang = defaultLangData;
         }
 
+        //this.popup.init();
         this.renderer.init();
         // document.querySelectorAll('[data-carousel]').forEach(el => {
         //     new Carousel(el, 5, 4000);
@@ -69,7 +74,8 @@ export class App {
 }
 
 const app = new App();
-await app.init();
+app.popup.init();
+//await app.init();
 
 
 

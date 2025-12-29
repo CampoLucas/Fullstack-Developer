@@ -73,7 +73,7 @@ export class Renderer {
     renderExperiences() {
         const experience = this.app.experience.experience;
         const baseId = experience.baseId;
-        console.log();
+        
 
         // Title
         const titleEl = document.getElementById("experience-title");
@@ -174,14 +174,13 @@ export class Renderer {
         if (!blocks) return;
 
         const length = blocks.length;
-        console.log(length)
+        
         for (let i = 0; i < length; i++) {
             const block = blocks[i];
             if (!block) {
                 console.log(`WARNING: [renderCustomText] Block from the index ${i} is null.`)
                 continue;
             }
-            console.log(block.type)
             switch (block.type) {
                 case "desc":
                     container.appendChild(this.getDescEl(block));
