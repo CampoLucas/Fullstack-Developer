@@ -125,12 +125,7 @@ export class Renderer {
         const img = document.getElementById("bg-popup");
         const media = block.media;
         const hasMedia = media;
-        if (hasMedia && media.background) {
-            img.src = media.background;
-        } 
-        else {
-            img.classList.add("disabled");
-        }
+        this.applyPopupBackground(media);
         
         const clone = template.content.firstElementChild.cloneNode(true);
         container.appendChild(clone);
@@ -158,6 +153,30 @@ export class Renderer {
             const btnCnt = clone.querySelector("#links-btn-cnt");
             this.renderContactButtons(btnCnt, block.buttons, baseId);
         }
+    }
+
+    applyPopupBackground(data) {
+        if (!data) return;
+
+        const background = data.background;
+        if (!background) return;
+
+        const img = document.getElementById("bg-popup");
+        const popup = document.querySelector(".popup");
+
+        // image
+        if (background.img) {
+            img.src = background.img;
+        } 
+        else {
+            img.classList.add("disabled");
+            return;
+        }
+
+        // colors via CSS variables
+        if (background.baseColor) popup.style.setProperty("--bg-base", background.baseColor);
+        if (background.overlayColor) popup.style.setProperty("--bg-overlay", background.overlayColor);
+        if (background.gradientEdgeColor) popup.style.setProperty("--bg-grad-edge", background.gradientEdgeColor);
     }
 
     addImgCarousel(container, template, images, alt) {
