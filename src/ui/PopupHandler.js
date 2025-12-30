@@ -21,7 +21,7 @@ export class PopupHandler {
         const slug = location.hash.slice(1);
         console.log("handleRoute");
 
-        this.removePopup();
+        //this.removePopup();
 
         if (!slug) return;
 
@@ -59,12 +59,18 @@ export class PopupHandler {
         render.renderProject(cnt, temp, project, render.t(baseId, project.baseId));
         const closeBtn = popup.querySelector("#close-popup-btn");
         closeBtn.onclick = () => {
+            // history.pushState("", document.title, window.location.pathname);
+            history.replaceState(
+                null,
+                document.title,
+                window.location.pathname + window.location.search
+            );
+            
             this.removePopup();
         }
     }
 
     removePopup() {
-        history.pushState("", document.title, window.location.pathname);
         document.body.classList.remove("popup-open");
         document.querySelector(".popup")?.remove();
     }
