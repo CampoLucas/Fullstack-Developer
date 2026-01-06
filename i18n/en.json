@@ -153,14 +153,14 @@
                 "imgAlt": "Vocab Match showcase"
             },
             "greatestMovies": {
-                "title": "Vocab Match",
+                "title": "Greatest Movies",
                 "shortDesc": "A web based vocabulary trainer",
                 "desc": [
                     "A JSON driven language learning game.",
                     "Supports multiple languages and game modes."
                 ],
                 "roles": [ "Frontend Programmer" ],
-                "imgAlt": "Vocab Match showcase"
+                "imgAlt": "Greatest Movies showcase"
             }
         },        
         "categories": {
