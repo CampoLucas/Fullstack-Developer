@@ -33,7 +33,7 @@
             "blocks": [
                     { 
                         "type": "desc", 
-                        "title": "Projects",
+                        "title": "Project",
                         "text": "AR/VR multiplayer platformer developed for Oculus, awarded the Lion at the Biennale di Venezia (2022)."
                     },
                     {
@@ -70,7 +70,7 @@
                         { 
                             "type": "desc", 
                             "title": "About the Game",
-                            "text": "A fast-paced first-person action game centered on momentum and precision."
+                            "text": "Rush Rift is a fast-paced first-person speedrunner game where every second counts. Dash through cyberpunk arenas, chain attacks with precision, and keep your momentum alive as you race toward the finish."
                         },
                         { 
                             "type": "desc", 
@@ -106,7 +106,11 @@
                         { 
                             "type": "desc", 
                             "title": "About the Game",
-                            "text": "A top-down shooter/puzzle game, where the player needs to complete an objective either stealthily or head on."
+                            "text": [ 
+                                "Gun Bandit is a 2D top-down shooter/puzzle game where you play as a mercenary hired to carry out dangerous missions inpired in Hotline Miami.",
+                                "Play your way, go in guns blazing, or take a stealthy approach and avoid detection. Every mission is a choice: fight or sneak.",
+                                "Simple prototype to demonstrate pathfinding, state machine, and enemy AI."
+                            ]
                         },
                         { 
                             "type": "desc", 
@@ -124,7 +128,10 @@
                         { 
                             "type": "desc", 
                             "title": "About the Game",
-                            "text": "A 3D shoot ‘em up with bullet hell elements."
+                            "text": [
+                                "In 3047 you play as a space bounty hunter, where you were task to eliminate groups of bandits and save the galaxy.",
+                                "It is a 3D shoot em up, until the boss battle starts, and it becomes a bullet hell."
+                            ]
                         },
                         { 
                             "type": "desc", 

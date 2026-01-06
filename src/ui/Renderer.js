@@ -208,6 +208,13 @@ export class Renderer {
         const descCnt = clone.querySelector("#description-cnt");
         this.renderCustomText(descCnt, baseId[block.blocksId]);
 
+
+        // Add the tags
+        // if (block.tags) {
+        //     const tagCnt = clone.querySelector("#tags-cnt");
+        //     tagCnt.appendChild(this.getUlEl(block.tags, "info-tags", "info-tag");
+        // }
+
         // Buttons
         if (block.buttons) {
             const btnCnt = clone.querySelector("#links-btn-cnt");
@@ -336,9 +343,18 @@ export class Renderer {
             cntEl.appendChild(titleEl);
         } 
         
-        const textEl = document.createElement("p");
-        textEl.textContent = block.text;
-        cntEl.appendChild(textEl);
+        if (Array.isArray(block.text)) {
+            block.text.forEach(t => {
+                const el = document.createElement("p");
+                el.textContent = t;
+                cntEl.appendChild(el);
+            });
+        }
+        else {
+            const textEl = document.createElement("p");
+            textEl.textContent = block.text;
+            cntEl.appendChild(textEl);
+        }
 
         return cntEl;
     }
