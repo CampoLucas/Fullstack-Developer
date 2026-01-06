@@ -1,4 +1,4 @@
-import { Carousel } from "./elements/Carousel.js";
+import { MediaCarousel } from "./elements/MediaCarousel.js";
 
 export class Renderer {
     constructor(app) {
@@ -186,7 +186,7 @@ export class Renderer {
         const clone = template.content.firstElementChild.cloneNode(true);
         container.appendChild(clone);
 
-        this.carousels.push(new Carousel(clone, 5, 4000, images, alt));
+        this.carousels.push(new MediaCarousel(clone, 5, 4000, images, alt));
     }
 
     

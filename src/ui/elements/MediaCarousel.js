@@ -1,6 +1,4 @@
-export class Carousel {
-
-
+export class MediaCarousel {
     constructor(root, thumbsPerView = 4, autoInterval = null, images = null, alt = null) {
         this.root = root;
 

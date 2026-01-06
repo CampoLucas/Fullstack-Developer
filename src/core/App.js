@@ -51,11 +51,7 @@ export class App {
             this.defaultLang = defaultLangData;
         }
 
-        //this.popup.init();
         this.renderer.init();
-        // document.querySelectorAll('[data-carousel]').forEach(el => {
-        //     new Carousel(el, 5, 4000);
-        // });
 
         this.endLoad();
     }
