@@ -25,10 +25,16 @@ export class PopupHandler {
 
         if (!slug) return;
 
+        const projects = [];
+
+        this.app.projects.categories.forEach(c => {
+            projects.push(...c.projects);
+        });
+
         // check if there is a project with that id
-        const project = this.app.projects.projects.projects.find(p => p.baseId.toLowerCase() === slug.toLowerCase());
+        const project = projects.find(p => p.baseId.toLowerCase() === slug.toLowerCase());
         if (project) {
-            console.log(`loading project: ${project.id}`);
+            console.log(`loading project: ${project.baseId}`);
             //document.body.style.overflow = "hidden";
             document.body.classList.add("popup-open");
             this.createPopup(project);
@@ -53,10 +59,12 @@ export class PopupHandler {
         const cnt = document.getElementById("popup-viewport");
         const temp = document.getElementById("game-project");
         const render = this.app.renderer;
-        const projects = this.app.projects.projects;
+        const projects = this.app.projects;
         const baseId = projects.baseId;
 
-        render.renderProject(cnt, temp, project, render.t(baseId, project.baseId));
+        const id = render.t(baseId, "projects")[project.baseId];
+        //render.renderProject(cnt, temp, project, render.t(baseId, project.baseId));
+        render.renderProject(cnt, temp, project, id);
         const closeBtn = popup.querySelector("#close-popup-btn");
         closeBtn.onclick = () => {
             // history.pushState("", document.title, window.location.pathname);

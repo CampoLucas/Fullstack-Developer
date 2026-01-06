@@ -1,4 +1,9 @@
 import { MediaCarousel } from "./elements/MediaCarousel.js";
+import { CapsuleCarousel } from "./elements/CapsuleCarousel/CapsuleCarousel.js";
+
+// HTML Ids
+const projectsTitle = "proj-title";
+const projectsCarouselCnt = "proj-cap-cnt";
 
 export class Renderer {
     constructor(app) {
@@ -10,64 +15,64 @@ export class Renderer {
         this.renderHero();
         this.renderAbout();
         this.renderExperiences();
-
+        this.renderProjects();
 
     }
 
     renderHero() {
         if (!this.app) {
         }
-        const hero = this.app.home.hero;
-        const baseId = hero.baseId;
+        const data = this.app.home.hero;
+        const baseId = data.baseId;
         
         // Title
         const heroTitleEl = document.getElementById("hero-title");
-        const heroTitleBlocks = this.t(baseId, hero.titleId);
+        const heroTitleBlocks = this.t(baseId, data.titleId);
         this.renderStylizedText(heroTitleEl, heroTitleBlocks);
 
         // Roles
         const heroRolesEl = document.getElementById("hero-roles");
-        const heroRoles = this.t(baseId, hero.rolesId);
+        const heroRoles = this.t(baseId, data.rolesId);
         this.renderStylizedRoles(heroRolesEl, heroRoles, "hero-role", "ceparator");
 
         // Image
         const heroImg = document.getElementById("hero-pic");
-        heroImg.src = hero.picture.img;
-        heroImg.alt = this.t(baseId, hero.picture.altId) ?? "";
+        heroImg.src = data.picture.img;
+        heroImg.alt = this.t(baseId, data.picture.altId) ?? "";
 
         // Buttons
         const btnCnt = document.getElementById("hero-btn-cnt");
-        this.renderContactButtons(btnCnt, hero.buttons, baseId);
+        this.renderContactButtons(btnCnt, data.buttons, baseId);
         
     }
 
     renderAbout() {
-        const about = this.app.home.about;
-        const baseId = about.baseId;
+        const data = this.app.home.about;
+        const baseId = data.baseId;
 
         // Title
         const titleEl = document.getElementById("about-title");
-        titleEl.textContent = this.t(baseId, about.titleId);
+        titleEl.textContent = this.t(baseId, data.titleId);
 
         // Description
         const aboutDescEl = document.getElementById("about-desc");
-        const aboutParagraphs = this.t(baseId, about.descriptionId);
+        const aboutParagraphs = this.t(baseId, data.descriptionId);
         this.renderParagraphs(aboutDescEl, aboutParagraphs, ["header-description"]);
 
         // Image
         const aboutImg = document.getElementById("about-pic");
         if (aboutImg) {
-            aboutImg.src = about.picture.img;
-            aboutImg.alt = this.t(baseId, about.picture.altId) ?? "";
+            aboutImg.src = data.picture.img;
+            aboutImg.alt = this.t(baseId, data.picture.altId) ?? "";
         }
 
         // Contacts
         const contactsEl = document.getElementById("about-contacts");
-        this.renderContactInfo(contactsEl, about.contact, "contact-link", "contact-sep");
+        this.renderContactInfo(contactsEl, data.contact, "contact-link", "contact-sep");
 
         // Buttons
         const buttonsEl = document.getElementById("about-buttons");
-        this.renderContactButtons(buttonsEl, about.buttons, baseId);
+        this.renderContactButtons(buttonsEl, data.buttons, baseId);
     }
 
     renderExperiences() {
@@ -88,6 +93,60 @@ export class Renderer {
         for (let i = 0; i < experiences.length; i++) {
             this.renderExperience(experiencesEl, temp, experiences[i], this.t(baseId, experiences[i].baseId));
         }
+    }
+
+    renderProjects() {
+        const data = this.app.projects;
+        const baseId = data.baseId;
+        
+        // Title
+        const heroTitleEl = document.getElementById(projectsTitle);
+        heroTitleEl.textContent = this.t(baseId, data.titleId);
+
+        // Add carousels
+        const projectsCnt = document.getElementById(projectsCarouselCnt);
+        if (!projectsCnt) {
+            console.log(`WARNING: The project's carousel container with the id: ${projectsCarouselCnt} wasn't found`);
+            return;
+        }
+
+        // Render each category
+        if (!data.categories || data.categories.length === 0) {
+            console.log("No categories");
+        }
+
+        this.projCategories = [];
+        for (let i = 0; i < data.categories.length; i++) {
+            const capsules = [];
+
+            const category = data.categories[i];
+            const projects = category.projects;
+
+        
+            projects.forEach(project => {
+                const projId = project.baseId;
+
+                const imgAlt = this.t(baseId, "projects")[projId][project.imgAltId];
+                capsules.push({
+                    id: projId,
+                    title: this.t(baseId, "projects")[projId][project.titleId],
+                    img: project.media.capsuleImg ? { media: project.media.capsuleImg, alt: imgAlt ? imgAlt : null } : null,
+                    video: project.media.capsuleVideo ? { media: project.media.capsuleVideo, alt: imgAlt ? imgAlt : null } : null,
+                    tags: project.tags ? project.tags : null,
+                    link: project.link ? project.link : null
+                });
+            })
+            
+            const catData = {
+                type: category.type,
+                title: category.titleId ? this.t(baseId, "categories")[category.titleId] : null,
+                capsules: capsules,
+            };
+
+            this.projCategories.push(new CapsuleCarousel(catData, projectsCnt));
+            
+        }
+        
     }
 
     renderExperience(container, template, block, baseId) {
@@ -131,6 +190,7 @@ export class Renderer {
         container.appendChild(clone);
 
         // Set the title section
+        console.log(`base id is ${baseId}`);
         const titleEl = clone.querySelector("#project-title");
         titleEl.textContent = `${baseId[block.titleId]}`;
 

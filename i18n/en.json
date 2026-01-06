@@ -61,94 +61,104 @@
         }
     },
     "projects": {
-        "rushRift": {
-            "title": "Rush Rift",
-            "period": "Mar 2025 - Present",
-            "blocks": [
-                    { 
-                        "type": "desc", 
-                        "title": "About the Game",
-                        "text": "A fast-paced first-person action game centered on momentum and precision."
-                    },
-                    { 
-                        "type": "desc", 
-                        "title": "My Role",
-                        "text": "As Lead Programmer, I developed the core movement, dash, and attack systems, as well as the additive level-loading architecture, focusing on scalability, performance, and clean modular code in Unity."
-                    },
-                    {
-                        "type": "hr-ul",
-                        "title": "Tech & Context",
-                        "items": [
-                            "Unity", 
-                            "C#",
-                            "FPS",
-                            "Speedrunning", 
-                            "Shooter",
-                            "Fast-paced"
-                        ]
-                    }
+        "title": "Projects",
+        "projects": {
+            "rushRift": {
+                "title": "Rush Rift",
+                "period": "Mar 2025 - Present",
+                "blocks": [
+                        { 
+                            "type": "desc", 
+                            "title": "About the Game",
+                            "text": "A fast-paced first-person action game centered on momentum and precision."
+                        },
+                        { 
+                            "type": "desc", 
+                            "title": "My Role",
+                            "text": "As Lead Programmer, I developed the core movement, dash, and attack systems, as well as the additive level-loading architecture, focusing on scalability, performance, and clean modular code in Unity."
+                        }
+                    ],
+                "roles": [ "Lead Programmer" ],
+                "imgAlt": "Rush Rift showcase"
+            },
+            "mysticCatacombs": {
+                "title": "Mystic Catacombs",
+                "period": "Apr 2025 - May 2025",
+                "blocks": [
+                        { 
+                            "type": "desc", 
+                            "title": "About the Game",
+                            "text": "A personal project focused on AI development and combat mechanics, created to experiment with system design and gameplay feel."
+                        },
+                        { 
+                            "type": "desc", 
+                            "title": "My Role",
+                            "text": "Developed independently from start to finish to strengthen my technical and design skills in Unity."
+                        }
+                    ],
+                "roles": [ "Programmer" ],
+                "imgAlt": "Rush Rift showcase"
+            },
+            "gunBandit": {
+                "title": "Gun Bandit",
+                "period": "Aug 2022 - Nov 2022",
+                "blocks": [
+                        { 
+                            "type": "desc", 
+                            "title": "About the Game",
+                            "text": "A top-down shooter/puzzle game, where the player needs to complete an objective either stealthily or head on."
+                        },
+                        { 
+                            "type": "desc", 
+                            "title": "My Role",
+                            "text": "As Lead Programmer, In this project I was the sole programmer, I was responsible for programming the player, weapon system, enemies and UI."
+                        }
+                    ],
+                "roles": [ "Lead Programmer" ],
+                "imgAlt": "Rush Rift showcase"
+            },
+            "spaceGame": {
+                "title": "3047",
+                "period": "Mar 2022 - Aug 2022",
+                "blocks": [
+                        { 
+                            "type": "desc", 
+                            "title": "About the Game",
+                            "text": "A 3D shoot ‘em up with bullet hell elements."
+                        },
+                        { 
+                            "type": "desc", 
+                            "title": "My Role",
+                            "text": "I coded the player, damage system, UI, animations, enemies and boss behaviour."
+                        }
+                    ],
+                "roles": [ "Programmer" ],
+                "imgAlt": "Rush Rift showcase"
+            },
+            "langGame": {
+                "title": "Vocab Match",
+                "shortDesc": "A web based vocabulary trainer",
+                "desc": [
+                    "A JSON driven language learning game.",
+                    "Supports multiple languages and game modes."
                 ],
-            "roles": [ "Lead Programmer" ],
-            "imgAlt": "Rush Rift showcase"
-        },
-        "mysticCatacombs": {
-            "title": "Mystic Catacombs",
-            "period": "Apr 2025 - May 2025",
-            "blocks": [
-                    { 
-                        "type": "desc", 
-                        "title": "About the Game",
-                        "text": "A personal project focused on AI development and combat mechanics, created to experiment with system design and gameplay feel."
-                    },
-                    { 
-                        "type": "desc", 
-                        "title": "My Role",
-                        "text": "Developed independently from start to finish to strengthen my technical and design skills in Unity."
-                    },
-                    {
-                        "type": "hr-ul",
-                        "title": "Tech & Context",
-                        "items": [
-                            "Unity", 
-                            "C#",
-                            "3D",
-                            "Top-down", 
-                            "Fantasy",
-                            "Magic"
-                        ]
-                    }
+                "roles": [ "Frontend Programmer" ],
+                "imgAlt": "Vocab Match showcase"
+            },
+            "greatestMovies": {
+                "title": "Vocab Match",
+                "shortDesc": "A web based vocabulary trainer",
+                "desc": [
+                    "A JSON driven language learning game.",
+                    "Supports multiple languages and game modes."
                 ],
-            "roles": [ "Lead Programmer" ],
-            "imgAlt": "Rush Rift showcase"
-        },
-        "langGame": {
-            "title": "Vocab Match",
-            "shortDesc": "A web based vocabulary trainer",
-            "desc": [
-                "A JSON driven language learning game.",
-                "Supports multiple languages and game modes."
-            ],
-            "roles": [ "Frontend Programmer" ],
-            "imgAlt": "Vocab Match showcase"
-        },
-        "gunBandit": {
-            "title": "Gun Bandit",
-            "shortDesc": "A top-down shooter/puzzle game.",
-            "desc": [
-                "In Gun Bandit the player needs to complete an objective either stealthily or head on.",
-                "In this project I was the sole programmer, I was responsible for programming the player, weapon system, enemies and UI."
-            ],
-            "roles": [ "Lead Programmer" ],
-            "imgAlt": "Gun Bandit showcase"
-        },
-        "shipGame": {
-            "title": "3047",
-            "shortDesc": "A 3D shoot ‘em up with bullet hell elements.",
-            "desc": [
-                "I coded the player, damage system, UI, animations, enemies and boss behaviour."
-            ],
-            "roles": [ "Lead Programmer" ],
-            "imgAlt": "Gun Bandit showcase"
+                "roles": [ "Frontend Programmer" ],
+                "imgAlt": "Vocab Match showcase"
+            }
+        },        
+        "categories": {
+            "websitesTitle": "Web Pages",
+            "gamesTitle": "Games"
         }
     },
     "skills": {
