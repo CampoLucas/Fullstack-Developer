@@ -48,13 +48,28 @@
                     },
                     {
                         "type": "hr-ul",
-                        "title": "Tech & Context",
+                        "title": "Skill & Knoledge",
+                        "items": [
+                            "Multiplayer Architecture", 
+                            "Optimization",
+                            "Design Patterns",
+                            "OOP",
+                            "Behavior Trees",
+                            "Finate State Machines",
+                            "Pathfinding",
+                            "Combat AI"
+                        ]
+                    },
+                    {
+                        "type": "hr-ul",
+                        "title": "Tools",
                         "items": [
                             "Unity", 
                             "C#",
-                            "Multiplayer architecture",
+                            "Photon",
                             "Oculus VR", 
-                            "XR Toolkit"
+                            "XR Interaction Toolkit",
+                            "Git"
                         ]
                     }
                 ]

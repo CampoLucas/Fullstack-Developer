@@ -370,10 +370,10 @@ export class Renderer {
 
         if (!block.items) return cntEl;
 
-        const ulEl = document.createElement("ul");
+        const ulEl = document.createElement("div");
         ulEl.classList.add(styleClass);
         for (let i = 0; i < block.items.length; i++) {
-            const liEl = document.createElement("li");
+            const liEl = document.createElement("div");
             liEl.textContent = block.items[i];
 
             if (itemClass) {
