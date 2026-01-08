@@ -71,8 +71,8 @@
 
 .block-cnt .info-tags {
     box-sizing: border-box;
-    height: 47px;
-    padding: 8px;
+    /* height: 47px; */
+    /* padding: 8px; */
 }
 
 .skill-chip {

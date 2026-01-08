@@ -3,6 +3,22 @@
     --capsule-gap: 12px;
     --visible-games: 4;
     --visible-websites: 5;
+
+    --tag-h-pad: 5px;
+    --tag-w-pad: 8px;
+    --tag-height: 18px;
+    --tag-total-height: calc((var(--tag-h-pad) * 2) + var(--tag-height));
+    
+    --tag-font-size: 12px;
+
+    --max-tag-columns: 2;
+    --tags-gap: 8px;
+    --tags-padding: 8px;
+    --max-height: calc(
+        (var(--tag-total-height) * var(--max-tag-columns)) +
+        (var(--tags-gap) * (var(--max-tag-columns) - 1)) + 
+        (var(--tags-padding) * 2)
+    );
 }
 
 .projects-carousel {
@@ -190,16 +206,18 @@
 }
 
 .info-tags {
-    aspect-ratio: 3.78/1;
+    /* aspect-ratio: 3.78/1; */
+    
     width: 100%;
+    max-height: var(--max-height);
     box-sizing: border-box;
     
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
-    padding: 8px;
-    gap: 8px;
+    padding: var(--tags-padding);
+    gap: var(--tags-gap);
     background: linear-gradient(0.35turn, #74747424, #a8a8a824, #e1e1e124);
     overflow: hidden;
     box-sizing: border-box;
@@ -208,9 +226,10 @@
 .info-tag {
     background: #74747424;
     color: #dbdbdb;
-    border-radius: 2px;
-    padding: 5px 8px;
-    font-size: 12px;
+    border-radius: 3px;
+    line-height: var(--tag-height);
+    padding: var(--tag-h-pad) var(--tag-w-pad);
+    font-size: var(--tag-font-size);
     text-wrap: nowrap;
     justify-self: start;
 }
@@ -277,24 +296,14 @@
     :root {
         --visible-games: 3;
         --visible-websites: 4;
-    }
-    
-    /* .game-capsule {
-        width: calc(33.3333333333% - (12px * (3 - 1)) / 3);
-    } */
-    /* :root {
-        --visible-games: 3;
-    } */
 
-    .info-tags {
-        padding: 6px;
-        gap: 5px;
-        aspect-ratio: 3.3/1;
-    }
+        --tag-h-pad: 3px;
+        --tag-w-pad: 4px;
+        --tag-font-size: 10px;
+        --tag-height: 11px;
 
-    .info-tag {
-        font-size: 10px;
-        padding: 3px 4px;
+        --tags-gap: 5px;
+        --tags-padding: 6px;
     }
 }
 
@@ -302,26 +311,15 @@
     :root {
         --visible-games: 2;
         --visible-websites: 3;
-    }
-    
-    /* .game-capsule {
-        width: calc(50% - (12px * (2 - 1)) / 2);
-    } */
 
-    .info-tags {
-        padding: 6px;
-        gap: 5px;
-        aspect-ratio: 2.65/1;
+        --tag-h-pad: 3px;
+        --tag-w-pad: 4px;
+        --tag-font-size: 10px;
+        --tag-height: 11px;
+        
+        --tags-gap: 5px;
+        --tags-padding: 6px;
     }
-
-    .info-tag {
-        font-size: 10px;
-        padding: 3px 4px;
-    }
-
-    /* :root {
-        --visible-games: 2;
-    } */
 }
 
 .hidden {

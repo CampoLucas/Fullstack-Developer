@@ -18,13 +18,17 @@
     list-style: none; padding: 0;
 }
 
-.c-l li {
-    background-color: rgba(240, 248, 255, 0.105); 
+.c-l li,
+.h-l li {
+    background: linear-gradient(0.35turn, #74747424, #a8a8a824, #e1e1e124);
     padding: .25rem; 
-    padding-inline-start: 1rem; 
-    margin-right: 1rem; 
     border-radius: 15px; 
     margin-bottom: 5px;
+}
+
+.c-l li {
+    padding-inline-start: 1rem; 
+    margin-right: 1rem;
 }
 
 .h-l {
@@ -35,11 +39,7 @@
 }
 
 .h-l li {
-    background-color: rgba(240, 248, 255, 0.105); 
-    padding: .25rem; 
-    padding-inline: 1rem; 
-    border-radius: 15px; 
-    margin-bottom: 5px;
+    padding-inline: 1rem;
 }
 
 @media only screen and (orientation: portrait) and (max-width:640px) {

@@ -319,7 +319,7 @@ export class Renderer {
                     container.appendChild(this.getUlEl(block, "list"));
                     break;
                 case "hr-ul":
-                    container.appendChild(this.getUlEl(block, "info-tags", "info-tag"));
+                    container.appendChild(this.getUlEl(block, "info-tags", "info-tag", false));
                     break;
             }
 
@@ -359,7 +359,7 @@ export class Renderer {
         return cntEl;
     }
 
-    getUlEl(block, styleClass, itemClass = null) {
+    getUlEl(block, styleClass, itemClass = null, isList = true) {
         const cntEl = this.getBlockCntEl();
         
         if (block.title) {
@@ -370,10 +370,10 @@ export class Renderer {
 
         if (!block.items) return cntEl;
 
-        const ulEl = document.createElement("div");
+        const ulEl = document.createElement(isList ? "ul" : "div");
         ulEl.classList.add(styleClass);
         for (let i = 0; i < block.items.length; i++) {
-            const liEl = document.createElement("div");
+            const liEl = document.createElement(isList ? "li" : "div");
             liEl.textContent = block.items[i];
 
             if (itemClass) {
